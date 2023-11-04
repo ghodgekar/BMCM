@@ -1,3 +1,0 @@
-https://www.simplilearn.com/tutorials/php-tutorial/php-login-form
-
-https://speedysense.com/create-registration-login-system-php-mysql/
