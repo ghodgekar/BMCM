@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-
+test
 
 <div class="container-fluid" style="background-color:#ffc107;; height:220px">
 
@@ -126,11 +126,23 @@
                   </div>
                 </div>
 
-
+                <div class="row">
+                <div class="col-md-6 mb-4">
                 <div class="form-outline mb-4">
                   <input type="text" id="form3Example97" class="form-control form-control-lg" name="email" />
                   <label class="form-label" for="form3Example97">Email ID/ई-मेल आयडी</label>
                 </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="blood_grup" />
+                      <label class="form-label" for="form3Example1n1">Blood Group/रक्तगट</label>
+                    </div>
+                  </div>
+              
+              
+              </div>
                 <div class="form-outline mb-4">
                   <input type="text" id="form3Example97" class="form-control form-control-lg"name="permanent_address" />
                   <label class="form-label" for="form3Example97">Address/मूळ गावचा पत्ता</label>
