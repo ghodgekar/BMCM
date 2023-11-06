@@ -1,5 +1,9 @@
-<?php include 'header.php'; ?>
-
+<?php 
+include 'header.php';
+require_once "../config/db.php"; 
+$sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='2' ";
+$result = mysqli_query($mysqli, $sql);
+?>
 
 <div class="container">
 <table class="table">
@@ -15,84 +19,28 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!-- <button type="button" class="btn btn-danger">Rejected</button>  -->
-    </td>
+    <?php 
+    $count = 1;
+    while($row = mysqli_fetch_assoc($result)){
+      $name = $row['f_name'] . " ". $row['m_name'] . " ". $row['l_name'];
+      $email = $row['email'] ;
+      $mobile = $row['mobile_no'] ;
+      $address = $row['current_address'] ;
+    ?>
+    <tr class="text-center">
+      <th scope="row"><?php echo $count; ?></th>
+      <td><?php echo $name; ?></td>
+      <td><?php echo $email; ?></td>
+      <td><?php echo $mobile; ?></td>
+      <td><?php echo $address; ?></td>
+      <td>
+        <button type="button" class="btn btn-primary">view</button>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>abc</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!--<button type="button" class="btn btn-danger">Rejected</button> -->
-    </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>abc</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!-- <button type="button" class="btn btn-danger">Rejected</button>  -->
-    </td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>abc</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!-- <button type="button" class="btn btn-danger">Rejected</button> -->
-    </td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>abc</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!-- <button type="button" class="btn btn-danger">Rejected</button> -->
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>abc</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!-- <button type="button" class="btn btn-danger">Rejected</button> -->
-    </td> 
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>abc</td>
-      <td>abc@gmail.com</td>
-      <td>123456789</td>
-      <td>C-108, Eastern Business District, Lal Bahadur Shastri Marg, Mumbai, Maharashtra 400078</td>
-      <td><button type="button" class="btn btn-primary">view</button>
-        <!-- <button type="button" class="btn btn-warning">Payment</button> -->
-        <!-- <button type="button" class="btn btn-danger">Rejected</button> -->
-    </td>
-    </tr>
+    <?php $count ++; } ?>
   </tbody>
 </table>
+
 <?php include 'footer.php'; ?>
 </div>
 

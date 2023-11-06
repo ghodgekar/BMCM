@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2023 at 12:30 PM
+-- Generation Time: Nov 06, 2023 at 02:57 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `bmc_members`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_users`
+--
+
+CREATE TABLE `admin_users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `is_active` int(11) NOT NULL DEFAULT 1,
+  `created_by` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_by` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_users`
+--
+
+INSERT INTO `admin_users` (`id`, `name`, `username`, `password`, `is_active`, `created_by`, `updated_by`) VALUES
+(1, 'surabhi', 'surabhi@gmail.com', 'c3VyYWJoaUAxMjM=', 1, '2023-11-06 18:29:50', '2023-11-06 18:29:50');
 
 -- --------------------------------------------------------
 
@@ -57,7 +80,8 @@ CREATE TABLE `candidate_data` (
 --
 
 INSERT INTO `candidate_data` (`id`, `reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `recommendation_date`, `password`, `status`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, '020230', 'testyyy', 'test', 'test', 'test', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'hsdg', 1, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07');
+(1, '020230', 'testyyy', 'test', 'test', 'test', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'hsdg', 1, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07'),
+(2, '0202303', 'dffdf', 'dfsdf', 'sdf', 'fs', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'hsdg', 1, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07');
 
 -- --------------------------------------------------------
 
@@ -89,6 +113,12 @@ CREATE TABLE `document_master` (
 --
 
 --
+-- Indexes for table `admin_users`
+--
+ALTER TABLE `admin_users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `candidate_data`
 --
 ALTER TABLE `candidate_data`
@@ -111,10 +141,16 @@ ALTER TABLE `document_master`
 --
 
 --
+-- AUTO_INCREMENT for table `admin_users`
+--
+ALTER TABLE `admin_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `candidate_data`
 --
 ALTER TABLE `candidate_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `candidate_files`

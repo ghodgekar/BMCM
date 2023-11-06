@@ -1,0 +1,67 @@
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    font-size: 24px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+}
+
+
+.table th {
+    text-align: center;
+    height: 50px;
+    color: rgb(0, 179, 255);
+    font-size: 16px;
+}
+
+.text-dark {
+    color: #0e73d7 !important;
+}
+
+.success-span {
+    background: green;
+    padding: 5px 15px;
+    color: #fff;
+    margin-top: 15PX;
+}
+
+.error-span {
+    background: red;
+    padding: 5px 15px;
+    color: #fff;
+    margin-top: 15PX;
+}
+
+.error {
+    color: #ed0500;
+}
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
