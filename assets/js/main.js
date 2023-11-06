@@ -1,7 +1,11 @@
-$(document).ready(function () {
+$(document).ready(function () 
+
+{
     $("#registratiionform").validate({
+       
+        
         rules: {
-            f_name: { required: true,minlength:5},
+            f_name: { required: true,minlength:5,"onfocusout": true},
             m_name: { required: true },
             l_name: { required: true },
             position: { required: true },
@@ -16,17 +20,38 @@ $(document).ready(function () {
             recommender_mobile_no: { required: true },
             recommender_member_no: { required: true },
             recommendation_date: { required: true },
-            password: { required: true }
+            mobile_no: {minlength:10, maxlength:10},
+            password: {
+                required: true,
+                minlength: 5
+            },
+            password_confirm: {
+                required: true,
+                minlength: 5,
+                equalTo: '[name="password"]'
+            }
         },
         messages: {
             f_name: {required:"Please Enter Valid First Name", minlength:"Please correct"},
             password: {
                 required: "Please provide a password",
-                minlength: "Your password must be at least 6 characters long"
+                minlength: "Your password must be at least 5 characters long",
+                
             },
-            city: "Please enter your city",
-            gender: "This field is required"
+            password_confirm:{
+                equalTo:"password Does Not match",
+            },
+            mobile_no:{minlength:"mobile only 10 digit"}
+            
         },
+
+
+
+        onfocusout: function(element) {
+            this.element(element);
+        },
+
+
         submitHandler: function (form) {
             $.ajax({
                 type: form.method,
