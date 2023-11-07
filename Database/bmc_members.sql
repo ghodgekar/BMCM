@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2023 at 02:57 PM
+-- Generation Time: Nov 07, 2023 at 10:43 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -80,8 +80,8 @@ CREATE TABLE `candidate_data` (
 --
 
 INSERT INTO `candidate_data` (`id`, `reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `recommendation_date`, `password`, `status`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, '020230', 'testyyy', 'test', 'test', 'test', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'hsdg', 1, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07'),
-(2, '0202303', 'dffdf', 'dfsdf', 'sdf', 'fs', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'hsdg', 1, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07');
+(1, '020230', 'testyyy', 'test', 'test', 'test', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'MTIzNDU2Nzg5', 3, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07'),
+(2, '0202303', 'dffdf', 'dfsdf', 'sdf', 'fs', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sdsh', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'MTIzNDU2Nzg5', 2, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07');
 
 -- --------------------------------------------------------
 
