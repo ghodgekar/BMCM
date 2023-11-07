@@ -2,7 +2,7 @@ $(document).ready(function ()
 {
     $("#registratiionform").validate({
         rules: {
-            f_name: { required: true,minlength:5,"onfocusout": true},
+            f_name: { required: true},
             m_name: { required: true },
             l_name: { required: true },
             position: { required: true },
@@ -26,10 +26,11 @@ $(document).ready(function ()
                 required: true,
                 minlength: 5,
                 equalTo: '[name="password"]'
-            }
+            },
+            upload_file: { required: true }
         },
         messages: {
-            f_name: {required:"Please Enter Valid First Name", minlength:"Please correct"},
+            f_name: {required:"Please Enter Valid First Name"},
             password: {
                 required: "Please provide a password",
                 minlength: "Your password must be at least 5 characters long",
@@ -41,8 +42,6 @@ $(document).ready(function ()
             mobile_no:{minlength:"mobile only 10 digit"}
             
         },
-
-
 
         onfocusout: function(element) {
             this.element(element);

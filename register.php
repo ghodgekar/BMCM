@@ -15,7 +15,7 @@
                     <img src="image/profile.png" id="profile-pic">
                     <div class="text-center image">
                       <button type="button" class="upload-button btn btn-primary">Upload Profile</button>
-                      <input type="file" name="profile-img" accept="image/jpeg,image/png,image/jpg" id="input-file" style="display:none">
+                      <input type="file" name="upload_file[]" accept="image/jpeg,image/png,image/jpg" id="input-file" style="display:none">
                     </div>
                     <br>
                   </div>
@@ -176,16 +176,15 @@
                       <div class="form-outline">
                         <br>
                         <label for="files">Select files:</label>
-                        <input type="file" id="files" name="files" multiple><br><br><br>
-
+                        <input type="file" id="files" name="upload_file[]"><br><br><br>
                       </div>
                       <div class="form-outline">
                         <label for="files">Select files:</label>
-                        <input type="file" id="files" name="files" multiple><br><br><br><br>
+                        <input type="file" id="files" name="upload_file[]"><br><br><br><br>
                       </div>
                       <div class="form-outline">
                         <label for="files">Select files:</label>
-                        <input type="file" id="files" name="files" multiple><br><br>
+                        <input type="file" id="files" name="upload_file[]"><br><br>
                       </div>
                     </div>
                   </div>
