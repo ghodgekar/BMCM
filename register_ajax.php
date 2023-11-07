@@ -66,8 +66,9 @@ if (isset($f_name, $m_name, $l_name, $position, $division, $department, $emp_id,
                 // Insert form data in the database 
                 $currentYear = date("Y");
                 $last_id = $mysqli->insert_id;
-                $reg_no = str_pad($currentYear.$last_id, 6, '0', STR_PAD_LEFT);;
-                $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `recommendation_date`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$position', '$division', '$department', '$emp_id', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$recommendation_date', '$password','1','1')";
+                $reg_no = str_pad($currentYear.$last_id, 6, '0', STR_PAD_LEFT);
+                $encodePassword = base64_encode($password);
+                $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `recommendation_date`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$position', '$division', '$department', '$emp_id', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$recommendation_date', '$encodePassword','1','1')";
                 if ($mysqli->query($sql) === TRUE) {
                     $response['status'] = 1;
                     $response['message'] = 'Form data submitted successfully!';

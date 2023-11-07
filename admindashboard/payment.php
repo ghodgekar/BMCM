@@ -34,7 +34,8 @@ $result = mysqli_query($mysqli, $sql);
       <td><?php echo $mobile; ?></td>
       <td><?php echo $address; ?></td>
       <td>
-        <button type="button" class="btn btn-primary">view</button>
+        <button type="button" class="btn btn-primary submitBtn" data-id="<?php echo $row['id']; ?>" id="viewBtn">view</button>
+        <button type="button" class="btn btn-warning submitBtn" data-id="<?php echo $row['id']; ?>" data-status="3" id="approveBtn">Payment Done</button>
       </td>
     </tr>
     <?php $count ++; } ?>
