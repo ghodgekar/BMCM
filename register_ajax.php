@@ -1,15 +1,13 @@
 <?php
-require_once("config/db.php");
+require_once "config/db.php";
 
-$uploadDir = 'uploads/';
-
-// Allowed file types 
+// Allowed file types
 $allowTypes = array('jpg', 'png', 'jpeg');
 
-// Default response 
+// Default response
 $response = array(
     'status' => 0,
-    'message' => 'Form submission failed, please try again.'
+    'message' => 'Form submission failed, please try again.',
 );
 
 $f_name = $_POST['f_name'];
@@ -29,58 +27,66 @@ $recommender_member_no = $_POST['recommender_member_no'];
 $recommendation_date = $_POST['recommendation_date'];
 $password = $_POST['password'];
 
-// If form is submitted 
+// If form is submitted
 if (isset($f_name, $m_name, $l_name, $position, $division, $department, $emp_id, $mobile_no, $email, $permanent_address, $current_address, $recommender_name, $recommender_mobile_no, $recommender_member_no, $recommendation_date, $password)) {
-    // Check whether submitted data is not empty 
+    // Check whether submitted data is not empty
     if (!empty($f_name) && !empty($m_name) && !empty($l_name) && !empty($position) && !empty($division) && !empty($department) && !empty($emp_id) && !empty($mobile_no) && !empty($email) && !empty($permanent_address) && !empty($current_address) && !empty($recommender_name) && !empty($recommender_mobile_no) && !empty($recommender_member_no) && !empty($recommendation_date) && !empty($password)) {
-        // Validate email 
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
             $response['message'] = 'Please enter a valid email.';
         } else {
-            $uploadStatus = 1;
-
-            // Upload file 
-            $uploadedFile = '';
-            if (!empty($_FILES["profile-img"]["name"])) {
-                // File path config 
-                $fileName = basename($_FILES["profile-img"]["name"]);
-                $targetFilePath = $uploadDir . $fileName;
-                $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-
-                // Allow certain file formats to upload 
-                if (in_array($fileType, $allowTypes)) {
-                    // Upload file to the server 
-                    if (move_uploaded_file($_FILES["profile-img"]["tmp_name"], $targetFilePath)) {
-                        $uploadedFile = $fileName;
-                    } else {
-                        $uploadStatus = 0;
-                        $response['message'] = 'Sorry, there was an error uploading your file.';
-                    }
-                } else {
-                    $uploadStatus = 0;
-                    $response['message'] = 'Sorry, only ' . implode('/', $allowTypes) . ' files are allowed to upload.';
-                }
-            }
-
-            if ($uploadStatus == 1) {
-                // Insert form data in the database 
-                $currentYear = date("Y");
-                $last_id = $mysqli->insert_id;
-                $reg_no = str_pad($currentYear.$last_id, 6, '0', STR_PAD_LEFT);
+            $checkDuplicateQuery = "select id from candidate_data WHERE email=$email or mobile_no=$mobile_no";
+            $checkDuplicateResult = mysqli_query($mysqli, $checkDuplicateQuery);
+            $checkDuplicateRow = mysqli_fetch_assoc($checkDuplicateResult);
+            if (mysqli_num_rows($result) === 0) {
                 $encodePassword = base64_encode($password);
+                $getLastIdQuery = "select id from candidate_data order by id desc limit 1";
+                $getLastIdResult = mysqli_query($mysqli, $getLastIdQuery);
+                $getLastIdRow = mysqli_fetch_assoc($getLastIdResult);
+                if ($getLastIdRow['id'] == null) {
+                    $last_id = 1;
+                }
+                $last_id = $getLastIdRow['id'] + 1;
+                $currentYear = date("Y");
+                $reg_no = $cucc = sprintf($currentYear . '%05d', $last_id);
+
                 $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `recommendation_date`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$position', '$division', '$department', '$emp_id', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$recommendation_date', '$encodePassword','1','1')";
-                if ($mysqli->query($sql) === TRUE) {
-                    $response['status'] = 1;
-                    $response['message'] = 'Form data submitted successfully!';
+                if ($mysqli->query($sql) === true) {
+                    $file_path = 'uploads/' . $reg_no;
+                    if (!file_exists($file_path)) {
+                        mkdir($file_path, 0777, true);
+                    }
+                    $uploadedFile = '';
+                    if (isset($_FILES['upload_file']['name'])) {
+                        $total_files = count($_FILES['upload_file']['name']);
+                        for ($key = 0; $key < $total_files; $key++) {
+                            if (!empty($_FILES['upload_file']['name'][$key])) {
+                                $fileName = $key . '_' . $reg_no . '.jpg';
+                                $targetFilePath = $file_path . '/' . $fileName;
+                                $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                                if (move_uploaded_file($_FILES['upload_file']['tmp_name'][$key], $targetFilePath)) {
+                                    $uploadedFile = $fileName;
+                                    $response['status'] = 1;
+                                    $response['message'] = 'Form data submitted successfully!';
+                                } else {
+                                    $uploadStatus = 0;
+                                    $response['message'] = 'Sorry, there was an error uploading your file.';
+                                }
+                            }
+                        }
+                    }
                 } else {
                     echo "Error: " . $sql . "<br>" . $mysqli->error;
                 }
+            }else{
+                $uploadStatus = 0;
+                $response['message'] = 'Sorry, Mobile no Or Email Already Registered';
             }
+
         }
     } else {
         $response['message'] = 'Please fill all the mandatory fields.';
     }
 }
 
-// Return response 
+// Return response
 echo json_encode($response);
