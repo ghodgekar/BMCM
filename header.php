@@ -41,19 +41,19 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+              <a class="nav-link <?php if ($activePage =="index") {?> active <?php } ?>" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About Us</a>
+              <a class="nav-link <?php if ($activePage =="about") {?> active <?php } ?>" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="events.php">Events & Seminars </a>
+              <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="events.php">Events & Seminars </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="events.php">Phone Directory </a>
+              <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="events.php">Phone Directory </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="events.php">News & Media </a>
+              <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="events.php">News & Media </a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,7 +72,7 @@ session_start();
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact Us</a>
+              <a class="nav-link <?php if ($activePage =="contact") {?> active <?php } ?>" href="contact.php">Contact Us</a>
             </li>
           </ul>
 

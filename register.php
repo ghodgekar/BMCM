@@ -6,7 +6,7 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
         <div class="card card-registration my-4">
-          <form id="registratiionform" action="register_ajax.php" enctype="multipart/form-data" method="post">
+          <form id="registratiionform" enctype="multipart/form-data" method="post">
             <div class="row g-0">
               <div class="col-xl-2  d-xl-block">
                 <div class="hero">
@@ -246,7 +246,7 @@
                   <p><b>शुल्क भरल्याचा तपशील :-</b></p>
 
                   <div class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM " style="font-size:15px"/>
+                    <input type="text" id="form3Example97" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM" name="fees_type" style="font-size:15px"/>
                     <label class="form-label" for="form3Example97"> <span
                         style="font-size:12px">(Netbanking ने भरले असल्यास बँकेचे नाव द्यावे)</span>
                     </label>
@@ -256,13 +256,13 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"  placeholder="Transaction ID" style="font-size:15px"/>
+                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"  placeholder="Transaction ID" name="fees_transaction_id" style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1m1">Transaction ID</label> -->
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" placeholder="शुल्क भरल्याची दिनांक " style="font-size:15px"/>
+                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" placeholder="शुल्क भरल्याची दिनांक" name="fees_date" style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1n1">शुल्क भरल्याची दिनांक</label> -->
                       </div>
                     </div>

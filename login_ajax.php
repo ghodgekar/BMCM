@@ -23,7 +23,7 @@ if (isset($email, $password)) {
             $result = mysqli_query($mysqli, $sql);
             if (mysqli_num_rows($result) === 1) {
                 $row = mysqli_fetch_assoc($result);
-                if ($row['email'] === $email && $row['password'] === $encodePassword) {
+                if ($row['email'] === $email && $row['password'] === $encodePassword && $row['status'] === '3') {
                     $_SESSION['member_username'] = $row['email'];
                     $_SESSION['member_reg_no'] = $row['reg_no'];
                     $_SESSION['member_id'] = $row['id'];
@@ -32,7 +32,7 @@ if (isset($email, $password)) {
                     $response['url'] = 'index.php'; 
                 } else {
                     $response['status'] = 0;
-                    $response['message'] = 'Incorect User name or password2'; 
+                    $response['message'] = 'Admin Approval Pending...'; 
                     $response['url'] = ''; 
                 }
             } else {

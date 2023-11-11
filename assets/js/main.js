@@ -46,12 +46,10 @@ $(document).ready(function ()
         onfocusout: function(element) {
             this.element(element);
         },
-
-
         submitHandler: function (form) {
             $.ajax({
                 type: form.method,
-                url: form.action,
+                url: './register_ajax.php',
                 data: new FormData(form),
                 dataType: 'json',
                 contentType: false,

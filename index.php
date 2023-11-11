@@ -1,9 +1,4 @@
-<?php include 'header.php'; ?>
-
-
-
-
-
+<?php $activePage = "index"; include 'header.php'; ?>
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
@@ -30,9 +25,14 @@
   <div class="row" style="padding-left:0px">
     <div class="col-md-12">
       <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
-        <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center  py-2 text-white px-1 news"><span class="d-flex align-items-center">&nbsp;Events Updates</span></div>
-        <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#">Intimation of meeting -
-            Date 5/10/23</a> <span class="dot"></span> <a href="#"> Time 7 pm</a> <span class="dot"></span> <a href="#">Location - Vanita Samaj </a> <span class="dot"></span> <a href="#">Purpose - Discussion on digital platform, presentation by Shri. Hitesh Sawant (Maratha Business Forum) and other social activites of the mandal</a>
+        <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center  py-2 text-white px-1 news"><span
+            class="d-flex align-items-center">&nbsp;Events Updates</span></div>
+        <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+          onmouseout="this.start();"> <a href="#">Intimation of meeting -
+            Date 5/10/23</a> <span class="dot"></span> <a href="#"> Time 7 pm</a> <span class="dot"></span> <a
+            href="#">Location - Vanita Samaj </a> <span class="dot"></span> <a href="#">Purpose - Discussion on digital
+            platform, presentation by Shri. Hitesh Sawant (Maratha Business Forum) and other social activites of the
+            mandal</a>
         </marquee>
       </div>
     </div>
@@ -45,7 +45,11 @@
 
     <div class="col-sm-6">
       <p class="main" style="text-align: justify;">
-        सांस्कृतिक श्रीमंती लाभलेल्या प्रगतशील मुंबईत या उपनगरात सामाजिक , सांस्कृतिक ,शैक्षणिक जीवनात मराठा मंडळ सामाजिक संस्था मुंबई या संस्थेचे स्थान अनन्य साधारण आहे . समाजाची शैक्षणिक, सामाजिक, आरोग्यविषयक, पर्यावरणविषयक, सांस्कृतिक, शेतीविषयक सहकार्य आणि एकोपा जपण्यासाठी मुंबई या उपनगरात नवीन रहावयास आलेल्या परंतु विखुरलेल्या मराठा समाजास एकत्र आणून त्यांचाशी वैचारिक देवाण घेवाण करून त्यांच्या समस्या जाणून घेऊन एकत्रितपणे उपाय शोधण्यासाठी २९ मे २०२३ रोजी मराठा मंडळ सामाजिक संस्था मुंबई या संस्थेचा जन्म झाला.
+        सांस्कृतिक श्रीमंती लाभलेल्या प्रगतशील मुंबईत या उपनगरात सामाजिक , सांस्कृतिक ,शैक्षणिक जीवनात मराठा मंडळ
+        सामाजिक संस्था मुंबई या संस्थेचे स्थान अनन्य साधारण आहे . समाजाची शैक्षणिक, सामाजिक, आरोग्यविषयक, पर्यावरणविषयक,
+        सांस्कृतिक, शेतीविषयक सहकार्य आणि एकोपा जपण्यासाठी मुंबई या उपनगरात नवीन रहावयास आलेल्या परंतु विखुरलेल्या मराठा
+        समाजास एकत्र आणून त्यांचाशी वैचारिक देवाण घेवाण करून त्यांच्या समस्या जाणून घेऊन एकत्रितपणे उपाय शोधण्यासाठी २९
+        मे २०२३ रोजी मराठा मंडळ सामाजिक संस्था मुंबई या संस्थेचा जन्म झाला.
       </p>
     </div>
     <div class="col-sm-6">
@@ -61,97 +65,97 @@
   </div>
 </div>
 <div class="container" style="padding:25px">
-<h2 style="text-align:center;color:#f44336"> Activites</h2>
+  <h2 style="text-align:center;color:#f44336"> Activites</h2>
 </div>
 
 <div class="container" style="padding:25px">
-        <div class="row row-cols-1  g-4">
+  <div class="row row-cols-1  g-4">
 
-        <div class="col-sm-3">
-              <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
-                <img src="./image/housing scheme.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Housing Schemes</h5>
-                 
-                </div>
-              </div>
-            </div>
+    <div class="col-sm-3">
+      <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/housing scheme.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Housing Schemes</h5>
 
-            <div class="col-sm-3">
-                <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
-                  <img src="./image/सांस्कृतिक.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Events & Seminars</h5>
-
-                  
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-sm-3">
-              <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
-                <img src="./image/exam & courses.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Exams & Courses</h5>
-                  
-                 
-                </div>
-              </div>
-            </div>
-           
-              
-
-              <div class="col-sm-3">
-                <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
-                  <img src="./image/job conselling.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Job Conselling</h5>
-                  
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-              <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
-                <img src="./image/youth empowerment.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Youth Empowerment</h5>
-                 
-                  
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-sm-3">
-              <div class="card text-center shadow-sm p-3 mb-5 bg-body rounded">
-                <img src="./image/women empowerment.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Women Empowerment</h5>
-                 
-                 
-                </div>
-              </div>
-            </div>
-            
-            
-            
-
-              <div class="col-sm-3">
-                <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
-                  <img src="./image/job conselling.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Other Activites</h5>
-                 
-                    
-                  </div>
-                </div>
-              </div>
-          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/सांस्कृतिक.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Events & Seminars</h5>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3">
+      <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/exam & courses.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Exams & Courses</h5>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-sm-3">
+      <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/job conselling.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Job Conselling</h5>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/youth empowerment.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Youth Empowerment</h5>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3">
+      <div class="card text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/women empowerment.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Women Empowerment</h5>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col-sm-3">
+      <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+        <img src="./image/job conselling.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Other Activites</h5>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-    
+</div>
+
 
 <?php include 'footer.php'; ?>
 

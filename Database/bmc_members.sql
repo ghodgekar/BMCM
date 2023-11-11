@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2023 at 10:43 AM
+-- Generation Time: Nov 11, 2023 at 07:20 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -67,7 +67,9 @@ CREATE TABLE `candidate_data` (
   `recommender_name` varchar(50) NOT NULL,
   `recommender_mobile_no` varchar(50) NOT NULL,
   `recommender_member_no` varchar(50) NOT NULL,
-  `recommendation_date` datetime NOT NULL,
+  `fees_type` varchar(250) NOT NULL,
+  `fees_transaction_id` varchar(200) NOT NULL,
+  `fees_date` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `is_active` int(11) NOT NULL DEFAULT 1,
@@ -79,9 +81,10 @@ CREATE TABLE `candidate_data` (
 -- Dumping data for table `candidate_data`
 --
 
-INSERT INTO `candidate_data` (`id`, `reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `recommendation_date`, `password`, `status`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, '020230', 'testyyy', 'test', 'test', 'test', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'MTIzNDU2Nzg5', 3, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07'),
-(2, '0202303', 'dffdf', 'dfsdf', 'sdf', 'fs', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sdsh', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '2023-11-18 00:00:00', 'MTIzNDU2Nzg5', 2, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07');
+INSERT INTO `candidate_data` (`id`, `reg_no`, `f_name`, `m_name`, `l_name`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `fees_type`, `fees_transaction_id`, `fees_date`, `password`, `status`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, '020230', 'testyyy', 'test', 'test', 'test', 'test', 'testt', '222222', '789654123', 'gsgd@hsd.sds', 'sdhsg', 'hgsdh', 'dhfgh', '555555', 'dghdfhd', '', '', '', 'hsdg', 3, 1, '2023-11-04 16:57:07', '2023-11-04 16:57:07'),
+(2, '202300002', 'surabhi', 'suryakant', 'ghodgekar', 'Manager', 'A', 'IT', '2018EPM', '7506332010', 'surabhi@gmail.com', 'Testing Address', 'Testing Current Address', 'Testing Recommendor', '9874562136', 'Test789555', 'GPAY', '123545697899999', '2500', 'MTIzNDU2Nzg5', 3, 1, '2023-11-11 22:52:48', '2023-11-11 22:52:48'),
+(3, '202300003', 'dhj', 'hjhj', 'hjhjhj', 'jhhhj', 'hjjhhj', 'jhjhjjh', 'jhjhhj', '1234567899', 'jhj@gh.hjj', 'nhhj', 'jhhj', 'bghg', '1234567899', 'hgghghh', 'hhjhj', 'kjjjk', '555', 'MTIzNDU2Nzg5', 3, 1, '2023-11-11 23:13:08', '2023-11-11 23:13:08');
 
 -- --------------------------------------------------------
 
@@ -150,7 +153,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `candidate_data`
 --
 ALTER TABLE `candidate_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `candidate_files`

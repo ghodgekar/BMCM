@@ -65,3 +65,7 @@
         border-bottom-right-radius: .3rem;
     }
 }
+
+.modal-dialog{
+    max-width: 70%;
+}
