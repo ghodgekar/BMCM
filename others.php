@@ -5,7 +5,7 @@
 
       <div class="hero-image">
         <div class="hero-text">
-          <h1>Others Activity</h1>
+          <h1 style="color:red">Others Activity</h1>
           <!-- <p>And I'm a Photographer</p>
           <button>Hire me</button> -->
         </div>

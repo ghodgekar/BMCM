@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
-<div class="container-fluid" style="background-color:#ffc107;; height:220px">
-</div>
+
 <section>
   <div class="container py-5 h-100" id="div-id-name">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -23,7 +22,7 @@
               </div>
               <div class="col-xl-9">
                 <div class="card-body p-md-5 text-black">
-                  <h3 class="mb-2 text-uppercase" style="color: #ff9a03;"> Registration form</h3>
+                  <h3 class="mb-2 text-uppercase" style="color:#f44336;;"> Registration form</h3>
                   <p class="msg mb-4"></p>
                   <p style="text-align:justify">मी बृहन्मुंबई महानगरपालिकेत कार्यरत /सेवानिवृत्त कर्मचारी आहे. मराठा
                     मंडळ
@@ -32,33 +31,7 @@
                     वार्षिक
                     सभासद होण्याची माझी इच्छा
                     आहे व त्यासाठी असणारे आजीवन सभासद शुल्क/वार्षिक सभासद शुल्क भरण्यास मी तयार आहे.</p>
-                  <p><b>(आजीवन सभासद शुल्क- रुपये १००१/-, वार्षिक सभासद शुल्क- रुपये २०१/-, प्रवेश फी- रुपये ५१/-)</b>
-                  </p>
-                  <p><b>शुल्क भरल्याचा तपशील :-</b></p>
-
-                  <div class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM " style="font-size:15px"/>
-                    <label class="form-label" for="form3Example97"> <span
-                        style="font-size:12px">(Netbanking ने भरले असल्यास बँकेचे नाव द्यावे)</span>
-                    </label>
-
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"  placeholder="Transaction ID" style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1m1">Transaction ID</label> -->
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" placeholder="शुल्क भरल्याची दिनांक " style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1n1">शुल्क भरल्याची दिनांक</label> -->
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
+                  
                   <p><b>माझी वैयक्तिक माक्तिती खालील प्रमाणे:-</b></p>
                   <div class="row">
                     <div class="col-md-4 mb-4">
@@ -165,109 +138,86 @@
                       <div class="form-outline">
                         <p>Attachment(सोबत):-</p>
                         <ul>
-                          <li>बृहन्मुंबई महानगरपालिकेचे ओळखपत्र </li><br><br>
-                          <li>मराठा/कुणबी/कुणबी मराठा असल्याचे कागदपत्र </li>
-                          <p>(उदा - शाळा सोडल्याचा दाखला, Caste Certificate, SEBC Certificate, इत्यादी)</p><br>
-                          <li>शुल्क भरल्याची छायांकित प्रत</li>
+                          <li>बृहन्मुंबई महानगरपालिकेचे ओळखपत्र </li>
+                          
+                         
                         </ul>
                       </div>
+                        </div>
+                      <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <br>
+                        <label for="files">Select files:</label>
+                        <input type="file" id="files" name="upload_file[]">
+                      </div>
                     </div>
+                    </div> <!--row1-->
+                    <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                      
+                        <ul>
+                         
+                          <li>मराठा/कुणबी/कुणबी मराठा असल्याचे कागदपत्र </li>
+                          <p>(उदा - शाळा सोडल्याचा दाखला, Caste Certificate, SEBC Certificate, इत्यादी)</p><br>
+                         
+                        </ul>
+                      </div>
+                        </div> <!--col1-->
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <br>
                         <label for="files">Select files:</label>
-                        <input type="file" id="files" name="upload_file[]"><br><br><br>
+                        <input type="file" id="files" name="upload_file[]">
                       </div>
-                      <div class="form-outline">
+                      <!-- <div class="form-outline">
                         <label for="files">Select files:</label>
                         <input type="file" id="files" name="upload_file[]"><br><br><br><br>
-                      </div>
-                      <div class="form-outline">
-                        <label for="files">Select files:</label>
-                        <input type="file" id="files" name="upload_file[]"><br><br>
-                      </div>
+                      </div> -->
+
                     </div>
                   </div>
 
 
-                  <!--sign-->
-
-                  <!-- <div class="d-flex justify-content-end pt-3">
-
-                  <div class="card">
-
-                    <img src="image/sign.jpg" id="sign-pic" style="width: 200px;
-                         height:60px;
-                          margin-top: 40px;
-                          margin-bottom: 30px;
-                      ">
-                    <label for="input-files" class="label1">signature</label>
-                    <input type="file" accept="image/jpeg,image/png,image/jpg" id="input-files" style="display:none">
-                  </div>
-
-
-                </div> -->
-                  <!--sign end-->
-
+                 
                   <hr>
 
                   <div class="row">
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-12 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1m1" class="form-control form-control-lg"
                           name="recommender_name" placeholder="Name of Recommender/शिफारस करणाऱ्याचे नाव"  style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1m1">Name of Recommender/शिफारस करणाऱ्याचे
-                          नाव:-</label> -->
+                        
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1n1" class="form-control form-control-lg"
                           name="recommender_mobile_no"  placeholder=" Mobile No/मोबाईल नंबर" style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1n1"> Mobile No/मोबाईल नंबर</label> -->
+                        
                       </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <!-- <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <input type="date" id="form3Example1n1" class="form-control form-control-lg"
                           name="recommendation_date" placeholder=" Date/"  style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1n1"> Date/</label> -->
+                      
                       </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1n1" class="form-control form-control-lg"
                           name="recommender_member_no" placeholder="Member No/सभासद क्र." style="font-size:15px" />
-                        <!-- <label class="form-label" for="form3Example1n1"> Member No/सभासद क्र.</label> -->
+                        
                       </div>
                     </div>
 
-                    <p>मी वरील अर्जदार यांना ओळखतो/ओळखते . ते मराठा/कुणबी/कुणबी मराठा आहेत. संस्थेच्या सभासद होण्यासाठी
+                    <!-- <p>मी वरील अर्जदार यांना ओळखतो/ओळखते . ते मराठा/कुणबी/कुणबी मराठा आहेत. संस्थेच्या सभासद होण्यासाठी
                       मी
-                      त्यांची शिफारस करतो/करते. </p>
+                      त्यांची शिफारस करतो/करते. </p> -->
 
 
-                  <!--sign-->
-                  <!-- 
-
-                  <div class="d-flex justify-content-end pt-3">
-                    <div class="card">
-
-                      <img src="image/sign.jpg" id="sign-m" style="width: 200px;
-                        height:100px;
-                          margin-top: 40px;
-                          margin-bottom: 30px;
-                      ">
-                      <label for="input-sign"> शिफारस करणाऱ्याची सही</label>
-                      <input type="file" accept="image/jpeg,image/png,image/jpg" id="input-sign" style="display:none">
-                    </div>
-                  </div> -->
-
-                  <!--sign end-->
-
-
-
-
+                  
 
                   </div>
 
@@ -289,6 +239,47 @@
 
 
                   <hr>
+
+
+                  <p><b>(आजीवन सभासद शुल्क- रुपये १००१/-, वार्षिक सभासद शुल्क- रुपये २०१/-, प्रवेश फी- रुपये ५१/-)</b>
+                  </p>
+                  <p><b>शुल्क भरल्याचा तपशील :-</b></p>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example97" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM " style="font-size:15px"/>
+                    <label class="form-label" for="form3Example97"> <span
+                        style="font-size:12px">(Netbanking ने भरले असल्यास बँकेचे नाव द्यावे)</span>
+                    </label>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"  placeholder="Transaction ID" style="font-size:15px"/>
+                        <!-- <label class="form-label" for="form3Example1m1">Transaction ID</label> -->
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" placeholder="शुल्क भरल्याची दिनांक " style="font-size:15px"/>
+                        <!-- <label class="form-label" for="form3Example1n1">शुल्क भरल्याची दिनांक</label> -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                      <p>Attachment(सोबत):-</p>
+                        <label for="files">Payment slip</label>
+                        <input type="file" id="files" name="upload_file[]">
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <hr>
                   <div class="row">
                     <div class="col-md-12 mb-6">
                       <div class="form-outline">
@@ -308,7 +299,8 @@
 
                   <div class="d-flex justify-content-end pt-3">
                     <button type="button" class="btn btn-light btn-lg">Reset all</button>
-                    <button type="submit" class="btn btn-warning btn-lg ms-2 submitBtn">Submit form</button>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2 submitBtn" style="background-color: #f44336;
+    ">Submit form</button>
                   </div>
 
 

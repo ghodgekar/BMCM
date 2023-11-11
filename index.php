@@ -60,38 +60,99 @@
     <img src="./image/foooter.jpg" class="img-fluid" alt="...">
   </div>
 </div>
+<div class="container" style="padding:25px">
+<h2 style="text-align:center;color:#f44336"> Activites</h2>
+</div>
+
+<div class="container" style="padding:25px">
+        <div class="row row-cols-1  g-4">
+
+        <div class="col-sm-3">
+              <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+                <img src="./image/housing scheme.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Housing Schemes</h5>
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="./image/सांस्कृतिक.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Events & Seminars</h5>
+
+                  
+                  </div>
+                </div>
+              </div>
 
 
-
-<!-- <footer class="d-flex flex-wrap justify-content-between align-items-center py-3  border-top" style="background-color: #2b3a8a;">
-      
-          <div class="col-md-12 text-center">
+              <div class="col-sm-3">
+              <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+                <img src="./image/exam & courses.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Exams & Courses</h5>
+                  
+                 
+                </div>
+              </div>
+            </div>
            
-            <span class="text-muted" >Address :- तळमजला, एफ, सिताराम बिल्डिंग, अण्णासाहेब दौंडकर मार्ग, क्रॉफर्ड मार्केट, फोर्ट, मुंबई - ४०० ००१</span>
+              
+
+              <div class="col-sm-3">
+                <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="./image/job conselling.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Job Conselling</h5>
+                  
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+              <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+                <img src="./image/youth empowerment.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Youth Empowerment</h5>
+                 
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm-3">
+              <div class="card text-center shadow-sm p-3 mb-5 bg-body rounded">
+                <img src="./image/women empowerment.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Women Empowerment</h5>
+                 
+                 
+                </div>
+              </div>
+            </div>
+            
+            
+            
+
+              <div class="col-sm-3">
+                <div class="card  text-center shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="./image/job conselling.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Other Activites</h5>
+                 
+                    
+                  </div>
+                </div>
+              </div>
           </div>
-      
-          
-           
-        </footer>
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3  border-top" style="background-color: #2b3a8a;">
-      
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <span class="text-muted">© 2023 Company, Inc</span>
         </div>
+</div>
     
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          </ul>
-         
-      </footer>
 
-
- -->
 <?php include 'footer.php'; ?>
 
 

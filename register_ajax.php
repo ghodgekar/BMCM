@@ -34,10 +34,10 @@ if (isset($f_name, $m_name, $l_name, $position, $division, $department, $emp_id,
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
             $response['message'] = 'Please enter a valid email.';
         } else {
-            $checkDuplicateQuery = "select id from candidate_data WHERE email=$email or mobile_no=$mobile_no";
+            $checkDuplicateQuery = "select id from candidate_data WHERE email='$email' or mobile_no=$mobile_no";
             $checkDuplicateResult = mysqli_query($mysqli, $checkDuplicateQuery);
             $checkDuplicateRow = mysqli_fetch_assoc($checkDuplicateResult);
-            if (mysqli_num_rows($result) === 0) {
+            if (mysqli_num_rows($checkDuplicateResult) === 0) {
                 $encodePassword = base64_encode($password);
                 $getLastIdQuery = "select id from candidate_data order by id desc limit 1";
                 $getLastIdResult = mysqli_query($mysqli, $getLastIdQuery);

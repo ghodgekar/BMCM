@@ -4,9 +4,14 @@
 
 
 
-      <div class="hero-image">
+      <div class="hero-image"style="background-image:url(./image/about.jpg)
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;">
         <div class="hero-text">
-          <h1>About Us</h1>
+          <h1 style="color:red">About Us</h1>
           <!-- <p>And I'm a Photographer</p>
           <button>Hire me</button> -->
         </div>
