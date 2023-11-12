@@ -54,7 +54,7 @@ $result = mysqli_query($mysqli, $sql);
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <div class="table-responsive" style="width:780px">
+      <div class="table-responsive" style="width:700px">
       <table class="table table-bordered table-hover">
         <thead>
          
