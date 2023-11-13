@@ -1,6 +1,4 @@
 <?php include 'header.php'; ?>
-
-
 <section>
   <div class="container py-5 h-100" id="div-id-name">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -296,14 +294,10 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="d-flex justify-content-end pt-3">
                     <button type="button" class="btn btn-light btn-lg">Reset all</button>
-                    <button type="submit" class="btn btn-warning btn-lg ms-2 submitBtn" style="background-color: #f44336;
-    ">Submit form</button>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2 submitBtn" style="background-color: #f44336;">Submit form</button>
                   </div>
-
-
                 </div>
               </div>
             </div>

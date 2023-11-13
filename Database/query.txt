@@ -1,0 +1,1 @@
+ALTER TABLE `candidate_data` ADD `blood_grup` VARCHAR(40) NOT NULL AFTER `l_name`;
