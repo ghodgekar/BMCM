@@ -50,6 +50,11 @@ $result = mysqli_query($mysqli, $sql);
               id="approveBtn">Approve</button>
             <button type="button" class="btn btn-danger submitBtn" data-id="<?php echo $row['id']; ?>"
               id="rejectBtn">Rejected</button>
+
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  View Document
+</button>
+             
           </td>
         </tr>
         <?php $count++;
@@ -130,6 +135,16 @@ $result = mysqli_query($mysqli, $sql);
                   <th scope="row">recommendation_date</th>
                   <td>gghvhbhbh</td>
                 </tr>
+                <tr>
+                  <th scope="row">Gpay/phonepe/netbanking/paytm</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Transaction Id</th>
+                  <td>fghbjhbj</td>
+                  <th scope="row">Transaction Date</th>
+                  <td>gghvhbhbh</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -145,7 +160,40 @@ $result = mysqli_query($mysqli, $sql);
 
 
 
+<!--demo model-->
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Launch demo modal
+</button> -->
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Document</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="row justify-content-evenly">
+    <div class="col-4">
+    <img src="./image/maratha image1.jpg" class="img-fluid" alt="...">
+    <button  class="btn btn-danger"><i class="fa fa-download"></i> Download</button>
+    </div>
+    <div class="col-4">
+    <img src="./image/maratha image1.jpg" class="img-fluid" alt="...">
+    <button  class="btn btn-danger"><i class="fa fa-download"></i> Download</button>
+    </div>
+    <div class="col-4">
+    <img src="./image/maratha image1.jpg" class="img-fluid" alt="...">
+    <button  class="btn btn-danger"><i class="fa fa-download"></i> Download</button>
+    </div>
+  </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 
 
