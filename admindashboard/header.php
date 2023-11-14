@@ -55,6 +55,10 @@ if(!isset($_SESSION['username'])){
             border-bottom: 5px green solid;
             color: green;
             width: 212px;">Approved</a>
+            <a class="nav-link active" aria-current="page" href="announcement.php" style="margin-left:5px;
+            height: 100px;
+            padding-top:10px;
+           "><img src="./image/announcement icon.png" class="img-fluid" alt="..."></a>
           </div>
         </div>
       </div>

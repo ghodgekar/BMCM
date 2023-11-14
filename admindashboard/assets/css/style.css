@@ -42,6 +42,13 @@
     color: #ed0500;
 }
 
+
+.form-label {
+    margin-bottom: 0.5rem;
+    color: #F44336;
+    font-size: 18px;
+    font-weight: 500;
+}
 .gradient-custom-2 {
     /* fallback for old browsers */
     background: #fccb90;
