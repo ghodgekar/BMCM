@@ -1,6 +1,19 @@
 <?php include 'header.php'; ?>
 
-<div class="container">
+<div class="hero-image" style="background-image:url(./image/about.jpg)
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;">
+  <div class="hero-text">
+    <h1 style="color:red">Phone Directory</h1>
+    <!-- <p>And I'm a Photographer</p>
+          <button>Hire me</button> -->
+  </div>
+</div>
+
+<div class="container" style="padding-top:25px">
 <div class="d-flex justify-content-end">
 <div class="input-group">
   <div class="form-outline">
@@ -94,3 +107,6 @@
   </tbody>
 </table>
 </div>
+
+
+<?php include 'footer.php'; ?>
