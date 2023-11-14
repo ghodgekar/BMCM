@@ -134,17 +134,13 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <p>Attachment(सोबत):-</p>
-                        <ul>
-                          <li>बृहन्मुंबई महानगरपालिकेचे ओळखपत्र </li>
-                          
-                         
-                        </ul>
+                        <p><b>Attachment(सोबत):-</b></p>
+                          <p><b>1) बृहन्मुंबई महानगरपालिकेचे ओळखपत्र </b></p>   
                       </div>
                         </div>
                       <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <br>
+                      
                         <label for="files">Select files:</label>
                         <input type="file" id="files" name="upload_file[]">
                       </div>
@@ -153,18 +149,13 @@
                     <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                      
-                        <ul>
-                         
-                          <li>मराठा/कुणबी/कुणबी मराठा असल्याचे कागदपत्र </li>
-                          <p>(उदा - शाळा सोडल्याचा दाखला, Caste Certificate, SEBC Certificate, इत्यादी)</p><br>
-                         
-                        </ul>
+                          <p><b>2) मराठा/कुणबी/कुणबी मराठा असल्याचे कागदपत्र </b></p>
+                          <p>(उदा - शाळा सोडल्याचा दाखला, Caste Certificate, SEBC Certificate, इत्यादी)</p>
                       </div>
                         </div> <!--col1-->
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <br>
+                     
                         <label for="files">Select files:</label>
                         <input type="file" id="files" name="upload_file[]">
                       </div>
@@ -195,13 +186,8 @@
                         
                       </div>
                     </div>
-                    <!-- <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input type="date" id="form3Example1n1" class="form-control form-control-lg"
-                          name="recommendation_date" placeholder=" Date/"  style="font-size:15px"/>
-                      
-                      </div>
-                    </div> -->
+                   
+                    
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1n1" class="form-control form-control-lg"
@@ -246,7 +232,7 @@
                   <div class="form-outline mb-4">
                     <input type="text" id="form3Example97" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM" name="fees_type" style="font-size:15px"/>
                     <label class="form-label" for="form3Example97"> <span
-                        style="font-size:12px">(Netbanking ने भरले असल्यास बँकेचे नाव द्यावे)</span>
+                        style="font-size:12px">(Mode Of Payment)</span>
                     </label>
 
                   </div>
@@ -267,11 +253,20 @@
                   </div>
 
                   <div class="row">
+                  
+                    <div class="col-md-6 mb-4">
+                    <p><b>Attachment(सोबत):-</b></p>
+                      <div class="form-outline">
+                      
+                      <p><b>Payment slip/Cheque Photo</b></p>
+                      </div>
+                        </div> <!--col1-->
                     
                     <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                      <p>Attachment(सोबत):-</p>
-                        <label for="files">Payment slip</label>
+                      
+                    <div class="form-outline">
+                     
+                        <label for="files">Select file</label>
                         <input type="file" id="files" name="upload_file[]">
                       </div>
                       

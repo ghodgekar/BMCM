@@ -1,8 +1,8 @@
 <?php include 'header.php'?>
 
-<div class="container" style="padding:10px">
-    <div class="row">
-    <div class="col-8" style="padding:10px">
+<div class="container">
+<div class="row">
+<div class="col-sm-6" style="padding:10px">
 <form>
   <!-- Name input -->
   <div class="form-outline mb-4">
@@ -29,9 +29,7 @@
   <label class="form-label" for="form4Example3">Subject</label>
     <textarea class="form-control" id="form4Example3" rows="4"></textarea>
    
-  </div>
-
- 
+</div>
 
   <!-- Submit button -->
   <button type="submit" class="btn btn-primary btn-block mb-4" style="    width: 170px;
@@ -39,6 +37,11 @@
     background-color: #F44336;
     border-color: #F44336;">Add Events</button>
 </form>
-<div>
+</div>
+<div class="col-sm-6" style="padding:10px">
+<img src="./image/event announcement.jpg" class="img-fluid" alt="...">
+</div>
+
 </div>
 </div>
+<?php include 'footer.php'; ?>

@@ -97,8 +97,8 @@
 }
 
 .btn-primary {
-    --bs-btn-color: #df472b;
-    --bs-btn-bg: #fff;
+    --bs-btn-color:#ffff ;
+    --bs-btn-bg:#df472b;
     --bs-btn-border-color: #fff;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #df472b;
@@ -115,6 +115,24 @@
 
 
 
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ed0500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
 .text-muted {
     --bs-text-opacity: 1;

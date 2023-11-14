@@ -16,3 +16,7 @@
     background-color: rgb(207,23,23);
     border-radius: 50%;
     display: inline-block}
+
+    .bg-white {
+    background-color: #eae1e1;
+    }
