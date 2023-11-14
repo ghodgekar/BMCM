@@ -1,6 +1,4 @@
-<?php include 'header.php'; ?>
-
-
+<?php $activePage = "news_media"; include 'header.php'; ?>
 <div class="hero-image" style="background-image:url(./image/about.jpg)
   height: 50%;
   background-position: center;

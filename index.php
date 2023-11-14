@@ -1,4 +1,11 @@
-<?php $activePage = "index"; include 'header.php'; ?>
+<?php 
+$activePage = "index"; 
+include 'header.php'; 
+require_once "config/db.php";
+$sql = "SELECT * FROM announcement WHERE is_active='1' ";
+$result = mysqli_query($mysqli, $sql);
+
+?>
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
@@ -18,22 +25,27 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-
-
 <div class="container-fluid">
   <div class="row" style="padding-left:0px">
     <div class="col-md-12">
       <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
         <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center  py-2 text-white px-1 news"><span
             class="d-flex align-items-center">&nbsp;Events Updates</span></div>
-        <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
-          onmouseout="this.start();"> <a href="#">Intimation of meeting -
-            Date 5/10/23</a> <span class="dot"></span> <a href="#"> Time 7 pm</a> <span class="dot"></span> <a
-            href="#">Location - Vanita Samaj </a> <span class="dot"></span> <a href="#">Purpose - Discussion on digital
-            platform, presentation by Shri. Hitesh Sawant (Maratha Business Forum) and other social activites of the
-            mandal</a>
-        </marquee>
+          <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <?php 
+              $count = 1;
+              while ($row = mysqli_fetch_assoc($result)) { 
+              $date = $row['date'];
+              $time = $row['time'];
+              $place = $row['place'];
+              $subject = $row['subject'];  
+            ?>
+                <a href="#"><?php echo  $count; ?>. Intimation of meeting -Date <?php echo $date; ?></a> <span class="dot"></span><a href="#"> Time  <?php echo $time; ?></a><span class="dot"></span> 
+                <a href="#">Location -  <?php echo $place; ?> </a> <span class="dot"></span>
+                <a href="#" style="margin-right: 50px;">  Purpose - <?php echo $subject; ?>
+                </a>
+            <?php  $count++; } ?>
+          </marquee>
       </div>
     </div>
   </div>

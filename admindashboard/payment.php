@@ -6,7 +6,8 @@ $result = mysqli_query($mysqli, $sql);
 ?>
 
 <div class="container">
-<table class="table">
+  <br>
+<table class="table" id="paymentTbl">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -34,18 +35,23 @@ $result = mysqli_query($mysqli, $sql);
       <td><?php echo $mobile; ?></td>
       <td><?php echo $address; ?></td>
       <td>
-        <button type="button" class="btn btn-primary submitBtn" data-id="<?php echo $row['id']; ?>" id="viewBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button>
-        <button type="button" class="btn btn-warning submitBtn" data-id="<?php echo $row['id']; ?>" data-status="3" id="approveBtn">Payment Done</button> 
-        <button type="button" class="btn btn-secondary" id="documentBtn" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-id="<?php echo $row['id']; ?>"> View Document </button>
+        <button type="button" class="btn btn-primary submitBtn viewBtn" data-id="<?php echo $row['id']; ?>" id="viewBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button>
+        <button type="button" class="btn btn-warning submitBtn approveBtn" data-id="<?php echo $row['id']; ?>" data-status="3" id="approveBtn">Payment Done</button> 
+        <button type="button" class="btn btn-secondary documentBtn" id="documentBtn" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-id="<?php echo $row['id']; ?>"> View Document </button>
       </td>
     </tr>
     <?php $count ++; } ?>
   </tbody>
 </table>
-
+<br>
   <?php include 'view_popup.php'; ?>
   <?php include 'document_popup.php'; ?>
   <?php include 'footer.php'; ?>
+  <script>
+  $(document).ready(function() {
+      $('#paymentTbl').DataTable();
+  });
+  </script>
 </div>
 </body>
 </html>
