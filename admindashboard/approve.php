@@ -5,6 +5,23 @@ $sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='3' ";
 $result = mysqli_query($mysqli, $sql);
 ?>
 
+
+<div class="d-flex justify-content-end">
+<div class="input-group">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control"  style="    width: 250px;
+    border: 2px solid #00b3ff;
+    margin: 2px"/>
+   
+  </div>
+  <button type="button" class="btn btn-primary" style="background-color:#00b3ff;
+    color: #fff;">
+    <i class="fas fa-search">Search</i>
+  </button>
+</div>
+</div>
+
+
 <div class="container">
 <table class="table">
   <thead>
