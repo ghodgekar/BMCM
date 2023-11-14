@@ -21,7 +21,7 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid" >
   <div class="row" style="padding-left:0px">
     <div class="col-md-12">
       <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
@@ -40,20 +40,24 @@
 </div>
 
 
-<div class="container" style="padding: 25px;">
+
+
+<div class="container">
+  <p style="text-align:center;color:orange;padding:25px;font-size:22px;font-weight:500">
+  इतिहास!! तू वळूनी पाहती पाठीमागे जरा, झुकवूनी मस्तक करशील त्यांना मानाचा मुजरा !! अश्या राजमाता माँसाहेब जिजाऊ, मराठा सम्राज्याचे संस्थापक छत्रपती शिवाजी महाराज अन धर्मवीर प्रतापशील छत्रपती संभाजी महाराज यांना मानाचा मुजरा!!
+ </p>
+</div>
+<div class="container" style="padding: 25px;background-image:url('./image/bg bmc.jpg');background-repeat: no-repeat; background-position: center;background-size:cover;height:600px">
   <div class="row">
 
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <p class="main" style="text-align: justify;">
-        सांस्कृतिक श्रीमंती लाभलेल्या प्रगतशील मुंबईत या उपनगरात सामाजिक , सांस्कृतिक ,शैक्षणिक जीवनात मराठा मंडळ
-        सामाजिक संस्था मुंबई या संस्थेचे स्थान अनन्य साधारण आहे . समाजाची शैक्षणिक, सामाजिक, आरोग्यविषयक, पर्यावरणविषयक,
-        सांस्कृतिक, शेतीविषयक सहकार्य आणि एकोपा जपण्यासाठी मुंबई या उपनगरात नवीन रहावयास आलेल्या परंतु विखुरलेल्या मराठा
-        समाजास एकत्र आणून त्यांचाशी वैचारिक देवाण घेवाण करून त्यांच्या समस्या जाणून घेऊन एकत्रितपणे उपाय शोधण्यासाठी २९
-        मे २०२३ रोजी मराठा मंडळ सामाजिक संस्था मुंबई या संस्थेचा जन्म झाला.
+      हजारो वर्ाांच्या पारतांत्र्याच्या इजतहासाला पुसून टाकण्यासाठी, या गुलामजगरीच्या जोखडातून आपणा सवाांची मुक्तता करण्यासाठी, स्वराज्य जमळवण्याकरीता अठरा पगड जातीत जवखुरलेल्या तत्कालीन समाजाला एकसांध करण्याचां काम छत्रपती जिवाजी महाराजाांनी केलां. केवळ स्वराज्य प्राप्त करून भागणार नाही तर त्याचां रूपाांतर सुराज्यात होणां गरजेचां आहे हे देखील छत्रपती जिवाजी महाराजाांच्या राज्यकारभाराने अधोरेजखत केलां. या घटनेला देखील आज साडेतीनिे वर्ामहून अजधक काळ लोटलाय. दुदैवाने पररजस्थतीत अपेजित सुधारणा होत नाहीत हे जाणवत असतानाच छत्रपती जिवाजी महाराज याांना जाणता राजाचे वांिज म्हणून आपण सारेच आज त्याांना पुजतो. पण त्याांचा वारसा आपण तेवढ्याच समथमपणे पुढे चालवतो का? भारतीय स्वातांत्र्याचा अमृत महोत्सव साजरा करत असताना याच प्रश्नाने पछाडलेल्या बृहमुांबई महानगरपजलकेतील काही अजधकारी/ कममचारी याांनी पुढाकार घेऊन मराठा समाजाचा जवकासाचा ध्यास घेत एकत्र यायचां ठरवलां. आजण मग त्याांनी आखलेल्या सांकल्पनेला मूतम रूप जमळालां ते आपल्या या मराठा मांडळ सामाजजक सांस्थेच्या रूपाने. 
+
       </p>
     </div>
-    <div class="col-sm-6">
-      <img src="./image/maratha image.jpg" class="img-fluid" style="padding:20px" alt="...">
+    <div class="col-sm-4">
+      <img src="./image/Rajmudra.png" class="img-fluid" style="padding:20px" alt="...">
     </div>
   </div>
 </div>
@@ -64,11 +68,11 @@
     <img src="./image/foooter.jpg" class="img-fluid" alt="...">
   </div>
 </div>
-<div class="container" style="padding:25px">
+<div class="container" style="padding:25px;">
   <h2 style="text-align:center;color:#f44336"> Activites</h2>
 </div>
 
-<div class="container" style="padding:25px">
+<div class="container" style="padding:25px;">
   <div class="row row-cols-1  g-4">
 
     <div class="col-sm-3">

@@ -75,8 +75,10 @@ session_start();
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="contact") {?> active <?php } ?>" href="contact.php">Contact Us</a>
             </li>
+            
           </ul>
-
+          <button type="button" class="btn btn-warning"><a href="communityshop.php" style="color: #ffffff;
+    text-decoration: none;">Community Shop</a></button>
         </div>
       </div>
     </nav>
