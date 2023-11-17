@@ -16,7 +16,8 @@ if(!isset($_SESSION['username'])){
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css'>
   <link href="assets/css/style.css" rel="stylesheet">
   <link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
-  <title>BMC</title>
+  <title>Maratha Mandal</title>
+  <link rel="icon" type="image/x-icon" href="/image/fevicon icon.png">
 </head>
 
 <body>
@@ -25,10 +26,10 @@ if(!isset($_SESSION['username'])){
   <div class="container shadow-lg p-3 mb-5 bg-body rounded" style="background-color:rgb(230, 226, 221);padding:25px">
     <div class="container " style="background-color:rgb(226, 226, 226);padding:25px;">
       <div class="d-flex justify-content-between">
-        <div class="p-2 bd-highlight"><span>Admin Name : <?php echo $_SESSION['name']; ?></span><br>
-          <span>Admin Email : <?php echo $_SESSION['username']; ?></span>
+        <div class="p-2 bd-highlight"><span><b>Admin Name : </b><?php echo $_SESSION['name']; ?></span><br>
+          <span><b>Admin Email :</b> <?php echo $_SESSION['username']; ?></span>
         </div>
-        <div class="p-2 bd-highlight" style="color: red; font-size: 21px;"><a href="logout.php">Log Out</a></div>
+        <div class="p-2 bd-highlight" style="color: red; font-size: 21px;"><a href="logout.php" class="btn btn-danger">Log Out</a></div>
       </div>
     </div>
     <nav class="navbar navbar-expand-lg ">
@@ -64,7 +65,7 @@ if(!isset($_SESSION['username'])){
             color: red;
             width: 212px;">Rejected</a>
 
-            <a class="nav-link active" aria-current="page" href="announcement.php" style="margin-left:5px;
+            <a class="nav-link active " aria-current="page" href="announcement.php" style="margin-left:5px;
             height: 100px;
             padding-top:10px;
            "><img src="./image/announcement icon.png" class="img-fluid" alt="..."></a>

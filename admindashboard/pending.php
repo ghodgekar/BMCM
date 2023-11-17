@@ -45,7 +45,7 @@ $result = mysqli_query($mysqli, $sql);
         <td>
           <button type="button" class="btn btn-primary submitBtn viewBtn" data-id="<?php echo $row['id']; ?>" id="viewBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button>
           <button type="button" class="btn btn-success submitBtn approveBtn" data-id="<?php echo $row['id']; ?>" data-status="2" id="approveBtn">Approve</button>
-          <button type="button" class="btn btn-danger submitBtn rejectBtn" data-id="<?php echo $row['id']; ?>" id="rejectBtn">Rejected</button>
+          <button type="button" class="btn btn-danger submitBtn rejectBtn" data-id="<?php echo $row['id']; ?>" id="rejectBtn" data-bs-toggle="modal" data-bs-target="#exampleModal3">Rejected</button>
           <button type="button" class="btn btn-secondary documentBtn" id="documentBtn" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-id="<?php echo $row['id']; ?>"> View Document </button>
         </td>
       </tr>
@@ -61,6 +61,31 @@ $result = mysqli_query($mysqli, $sql);
       $('#pendingTbl').DataTable();
   });
   </script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content" style="width: 500px;
+    left: 25%;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reason</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="mb-3">
+  
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-danger">Rejected</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 </body>
 </html>
