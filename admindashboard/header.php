@@ -42,14 +42,14 @@ if(!isset($_SESSION['username'])){
             <a class="nav-link shadow-lg p-3 mb-5 bg-body rounded" href="pending.php" style="margin-left: 24px;
             height: 100px;
             padding-top: 25px;
-            border-bottom: 5px red solid;
-            color: red;
+            border-bottom: 5px rgb(253, 203, 2) solid;
+            color:rgb(253, 203, 2);
             width: 212px;">Pending</a>
             <a class="nav-link shadow-lg p-3 mb-5 bg-body rounded" href="payment.php" style="margin-left: 24px;
             height: 100px;
             padding-top: 25px;
-            border-bottom: 5px rgb(253, 203, 2) solid;
-            color:rgb(253, 203, 2);
+            border-bottom: 5px orange solid;
+            color:orange;
             width: 212px; ">Payment</a>
             <a class="nav-link active shadow-lg p-3 mb-5 bg-body rounded" aria-current="page" href="approve.php" style="margin-left: 24px;
             height: 100px;
@@ -57,6 +57,13 @@ if(!isset($_SESSION['username'])){
             border-bottom: 5px green solid;
             color: green;
             width: 212px;">Approved</a>
+            <a class="nav-link active shadow-lg p-3 mb-5 bg-body rounded" aria-current="page" href="rejected.php" style="margin-left: 24px;
+            height: 100px;
+            padding-top: 25px;
+            border-bottom: 5px red solid;
+            color: red;
+            width: 212px;">Rejected</a>
+
             <a class="nav-link active" aria-current="page" href="announcement.php" style="margin-left:5px;
             height: 100px;
             padding-top:10px;
