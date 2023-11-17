@@ -43,7 +43,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#approveBtn").click(function () {
+    $(".approveBtn").click(function () {
         var id = $(this).data("id");
         var status = $(this).data("status");
         $.ajax({
@@ -60,7 +60,7 @@ $(document).ready(function () {
         });
     })
 
-    $("#viewBtn").click(function () {
+    $(".viewBtn").click(function () {
         var id = $(this).data("id");
         $.ajax({
             type: 'POST',
@@ -73,7 +73,7 @@ $(document).ready(function () {
         });
     })
 
-    $("#documentBtn").click(function () {
+    $(".documentBtn").click(function () {
         var id = $(this).data("id");
         $.ajax({
             type: 'POST',
@@ -88,14 +88,57 @@ $(document).ready(function () {
 
     $('[data-fancybox="gallery"]').fancybox({
         buttons: [
-            "slideShow",
-            "thumbs",
-            "zoom",
-            "fullScreen",
-            "share",
-            "close"
+            'download',
+            'thumbs',
+            'close'
         ],
         loop: false,
         protect: true
+    });
+
+    $("#announcementform").validate({
+        rules: {
+            subject: { required: true },
+            place: { required: true },
+            time: { required: true }
+        },
+        messages: {
+            subject: { required: "Please Enter Subject" },
+            place: { required: "Please Enter Place" },
+            date: { required: "Please Enter Date" },
+            time: { required: "Please Enter time" }
+        },
+        onfocusout: function (element) {
+            this.element(element);
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                type: form.method,
+                url: form.action,
+                data: new FormData(form),
+                dataType: 'json',
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function () {
+                    $('.submitBtn').attr("disabled", "disabled");
+                    $('#announcementform').css("opacity", ".5");
+                },
+                success: function (response) {
+                    $('.submitBtn').removeAttr("disabled");
+                    $('#announcementform').css("opacity", "1");
+                    if (response.status == 0) {
+                        $(".msg").addClass("error-span");
+                        $(".msg").removeClass("success-span");
+                    } else {
+                        // window.location.href = response.url;
+                        $("#announcementform")[0].reset()
+                        $(".msg").addClass("success-span");
+                        $(".msg").removeClass("error-span");
+                    }
+                    $('.msg').text(response.message);
+                }
+            });
+        }
     });
 });

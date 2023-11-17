@@ -1,3 +1,12 @@
+body{
+    background-image:url('.assets/images/bg bmc.jpg');
+    background-repeat: no-repeat;
+     background-position: center;
+     background-size:cover;
+    
+
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 8px;
     padding-left: 8px;

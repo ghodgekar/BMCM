@@ -5,7 +5,8 @@ $sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='1' ";
 $result = mysqli_query($mysqli, $sql);
 ?>
 <div class="container">
-  <table class="table">
+  <br>
+  <table class="table" id="pendingTbl">
     <thead>
       <tr>
         <th scope="col">id</th>
@@ -42,18 +43,24 @@ $result = mysqli_query($mysqli, $sql);
           <?php echo $address; ?>
         </td>
         <td>
-          <button type="button" class="btn btn-primary submitBtn" data-id="<?php echo $row['id']; ?>" id="viewBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button>
-          <button type="button" class="btn btn-success submitBtn" data-id="<?php echo $row['id']; ?>" data-status="2" id="approveBtn">Approve</button>
-          <button type="button" class="btn btn-danger submitBtn" data-id="<?php echo $row['id']; ?>" id="rejectBtn">Rejected</button>
-          <button type="button" class="btn btn-secondary" id="documentBtn" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-id="<?php echo $row['id']; ?>"> View Document </button>
+          <button type="button" class="btn btn-primary submitBtn viewBtn" data-id="<?php echo $row['id']; ?>" id="viewBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button>
+          <button type="button" class="btn btn-success submitBtn approveBtn" data-id="<?php echo $row['id']; ?>" data-status="2" id="approveBtn">Approve</button>
+          <button type="button" class="btn btn-danger submitBtn rejectBtn" data-id="<?php echo $row['id']; ?>" id="rejectBtn">Rejected</button>
+          <button type="button" class="btn btn-secondary documentBtn" id="documentBtn" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-id="<?php echo $row['id']; ?>"> View Document </button>
         </td>
       </tr>
       <?php $count++; }?>
     </tbody>
   </table>
+  <br>
   <?php include 'view_popup.php';?>
   <?php include 'document_popup.php';?>
   <?php include 'footer.php';?>
+  <script>
+  $(document).ready(function() {
+      $('#pendingTbl').DataTable();
+  });
+  </script>
 </div>
 </body>
 </html>

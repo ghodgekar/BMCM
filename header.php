@@ -51,10 +51,10 @@ session_start();
               <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="events.php">Events & Seminars </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="phonedirectory.php">Phone Directory </a>
+              <a class="nav-link <?php if ($activePage =="phone_directory") {?> active <?php } ?>" href="phonedirectory.php">Phone Directory </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="news_media.php">News & Media </a>
+              <a class="nav-link <?php if ($activePage =="news_media") {?> active <?php } ?>" href="news_media.php">News & Media </a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

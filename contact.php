@@ -1,22 +1,16 @@
 <?php $activePage = "contact";include 'header.php'; ?>
 
-<div class="hero-image" style="background-image:url(./image/about.jpg)
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;">
+<div class="hero-image" >
   <div class="hero-text">
     <h1>Contact Us</h1>
-    <!-- <p>And I'm a Photographer</p>
-    <button>Hire me</button> -->
+    
   </div>
 </div>
 
 
 
 
-<div class="container overflow-hidden">
+<div class="container" style="padding-top: 25px;">
   <div class="row gy-5">
     <div class="col-sm-4">
       <div class="p-3 ">
@@ -49,7 +43,7 @@
 
 
 
-<div class="container shadow-lg p-3 mb-5 bg-body rounded"">
+<div class="container shadow-lg p-3 mb-5 bg-body rounded">
   <div class=" row">
 
   <div class="col-sm-6" style="padding:15px">
@@ -77,7 +71,7 @@
 
       <button type="submit" class="btn btn-secondary" style="
               width: 190px;
-              padding: 15px;">Submit</button>
+              padding: 15px;background-color:red">Submit</button>
     </form>
 
 
