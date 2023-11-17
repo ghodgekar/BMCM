@@ -1,26 +1,9 @@
-<?php 
+<?php
 include 'header.php';
-require_once "../config/db.php"; 
+require_once "../config/db.php";
 $sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='3' ";
 $result = mysqli_query($mysqli, $sql);
 ?>
-
-
-<div class="d-flex justify-content-end">
-<div class="input-group">
-  <div class="form-outline">
-    <input type="search" id="form1" class="form-control"  style="    width: 250px;
-    border: 2px solid #00b3ff;
-    margin: 2px"/>
-   
-  </div>
-  <button type="button" class="btn btn-primary" style="background-color:#00b3ff;
-    color: #fff;">
-    <i class="fas fa-search">Search</i>
-  </button>
-</div>
-</div>
-
 
 <div class="container">
     <br>
@@ -36,14 +19,14 @@ $result = mysqli_query($mysqli, $sql);
             </tr>
         </thead>
         <tbody>
-            <?php 
-            $count = 1;
-            while($row = mysqli_fetch_assoc($result)){
-              $name = $row['f_name'] . " ". $row['m_name'] . " ". $row['l_name'];
-              $email = $row['email'] ;
-              $mobile = $row['mobile_no'] ;
-              $address = $row['current_address'] ;
-            ?>
+            <?php
+$count = 1;
+while ($row = mysqli_fetch_assoc($result)) {
+    $name = $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
+    $email = $row['email'];
+    $mobile = $row['mobile_no'];
+    $address = $row['current_address'];
+    ?>
             <tr class="text-center">
                 <th scope="row"><?php echo $count; ?></th>
                 <td><?php echo $name; ?></td>
@@ -57,14 +40,14 @@ $result = mysqli_query($mysqli, $sql);
                         data-bs-target="#exampleModal1" data-id="<?php echo $row['id']; ?>"> View Document </button>
                 </td>
             </tr>
-            <?php $count ++; } ?>
+            <?php $count++;}?>
         </tbody>
     </table>
     <br>
-    <?php include 'view_popup.php'; ?>
-    <?php include 'document_popup.php'; ?>
+    <?php include 'view_popup.php';?>
+    <?php include 'document_popup.php';?>
 
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.php';?>
 </div>
 <script>
 $(document).ready(function() {

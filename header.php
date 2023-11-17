@@ -32,10 +32,10 @@ session_start();
         </div>
       <?php } ?>
     </div>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./image/logo1.png" alt="" class="d-inline-block align-text-top"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,8 +77,7 @@ session_start();
             </li>
             
           </ul>
-          <button type="button" class="btn btn-warning"><a href="communityshop.php" style="color: #ffffff;
-    text-decoration: none;">Community Shop</a></button>
+          <button type="button" class="btn btn-warning"><a href="communityshop.php" style="color: #ffffff; text-decoration: none;">Community Shop</a></button>
         </div>
       </div>
     </nav>
