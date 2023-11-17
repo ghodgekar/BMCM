@@ -34,4 +34,39 @@
         </div>
     </div>
 </div>
-<?php include 'footer.php';?>
+<div class="col-sm-12" style="padding:10px">
+        <div class="container">
+    <br>
+    <table class="table" >
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Place</th>
+                <th scope="col">Subject</th>
+                
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr class="text-center">
+                <th scope="row">1</th>
+                <td>11/12/2023</td>
+                <td>12pm</td>
+                <td>Mumbai</td>
+                <td>hfggghvgfdhgdhgdhgdhgdhgdh   gfygeuyfgeurfy  hgyfgeyfg</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-danger">Delete </button>
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+        </div>
+    </div>
+    <?php include 'footer.php';?>
+</div>
+
