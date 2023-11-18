@@ -3,3 +3,6 @@ ALTER TABLE `candidate_data` ADD `blood_grup` VARCHAR(40) NOT NULL AFTER `l_name
 CREATE TABLE `bmc_members`.`announcement` (`id` INT NOT NULL AUTO_INCREMENT , `subject` VARCHAR(255) NOT NULL , `place` VARCHAR(255) NOT NULL , `date` VARCHAR(100) NOT NULL , `time` INT(100) NOT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 ALTER TABLE `announcement` ADD `is_active` INT NOT NULL DEFAULT '1' AFTER `time`;
+
+//
+ALTER TABLE `announcement` CHANGE `time` `time` VARCHAR(100) NOT NULL;

@@ -60,6 +60,52 @@ $(document).ready(function () {
         });
     })
 
+    $(".rejectBtn").click(function () {
+        var id = $(this).data("id");
+        $("#id").val(id);
+        $('#exampleModal3').modal('show');
+    })
+
+    $("#rejectionform").validate({
+        rules: {
+            reason: { required: true }
+        },
+        messages: {
+            reason: { required: "Please Enter Valid Reason" }
+        },
+        onfocusout: function (element) {
+            this.element(element);
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                type: form.method,
+                url: 'updatestatus_ajax.php',
+                data: new FormData(form),
+                dataType: 'json',
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function () {
+                    $('.submitBtn').attr("disabled", "disabled");
+                    $('#rejectionform').css("opacity", ".5");
+                },
+                success: function (response) {
+                    $('.submitBtn').removeAttr("disabled");
+                    $('#rejectionform').css("opacity", "1");
+                    if (response.status == 0) {
+                        $(".msg").addClass("error-span");
+                    } else {
+                        window.location.href = 'rejected.php';
+                        $('#rejectionform')[0].reset();
+                        $(".msg").addClass("success-span");
+                        $('#exampleModal3').modal('hide');
+                    }
+                    $('.msg').text(response.message);
+                }
+            });
+        }
+    });
+
     $(".viewBtn").click(function () {
         var id = $(this).data("id");
         $.ajax({
@@ -131,7 +177,7 @@ $(document).ready(function () {
                         $(".msg").addClass("error-span");
                         $(".msg").removeClass("success-span");
                     } else {
-                        // window.location.href = response.url;
+                        window.location.href = 'announcement.php';
                         $("#announcementform")[0].reset()
                         $(".msg").addClass("success-span");
                         $(".msg").removeClass("error-span");
@@ -141,4 +187,33 @@ $(document).ready(function () {
             });
         }
     });
+
+    $(".announcementBtn").click(function () {
+        var id = $(this).data("id");
+        var posttype = $(this).data("type");
+        $("#id").val(id);
+        $("#posttype").val(posttype);
+        if (posttype == 'edit') {
+            $(".announcementBtnTxt").text('Edit Event');
+            $.ajax({
+                type: 'POST',
+                url: 'announcement_data_ajax.php',
+                data: { 'id': id },
+                success: function (response) {
+                    var data = JSON.parse( response );
+                    $("#date").val(data.data.date);
+                    $("#time").val(data.data.time);
+                    $("#place").val(data.data.place);
+                    $("#subject").val(data.data.subject);
+                }
+            });
+        }else{
+            $(".announcementBtnTxt").text('Add Event');
+            $("#date").val('');
+            $("#time").val('');
+            $("#place").val('');
+            $("#subject").val('');
+        }
+        $('#exampleModal').modal('show');
+    })
 });

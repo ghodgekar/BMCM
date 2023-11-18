@@ -28,6 +28,7 @@ session_start();
         </div>
       <?php }else{ ?>
         <div class="p-2 bd-highlight">
+          <a class="btn btn-danger" style="background-color:#f7e510" href="userpanel/index.php">Profile</a></button>
           <a class="btn btn-primary" href="logout.php">Logout</a></button>
         </div>
       <?php } ?>

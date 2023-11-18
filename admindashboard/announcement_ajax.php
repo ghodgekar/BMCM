@@ -7,6 +7,7 @@ $response = array(
     'message' => 'Form submission failed, please try again.',
 );
 
+$type = $_POST['posttype'];
 $date = $_POST['date'];
 $time = $_POST['time'];
 $place = $_POST['place'];
@@ -15,7 +16,11 @@ $subject = $_POST['subject'];
 // If form is submitted
 if (isset($date, $time, $place, $subject)) {
     if (!empty($date) && !empty($time) && !empty($place) && !empty($subject)) {
-        $sql = "INSERT INTO `announcement`(`date`, `time`, `place`, `subject`, `is_active`) VALUES ('$date','$time', '$place', '$subject','1')";
+        if($type == 'add'){
+            $sql = "INSERT INTO `announcement`(`date`, `time`, `place`, `subject`, `is_active`) VALUES ('$date','$time', '$place', '$subject','1')";
+        }elseif ($type == 'edit') {
+            $sql = "UPDATE announcement SET date='$date', time='$time', place='$place', subject='$subject' WHERE id=$_POST[id]";
+        }
         if ($mysqli->query($sql) === true) {
             $response['status'] = 1;
             $response['message'] = 'Form data submitted successfully!';
