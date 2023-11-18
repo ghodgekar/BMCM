@@ -1,5 +1,5 @@
 body{
-    background-image:url('.assets/images/bg bmc.jpg');
+    background-image:url('../images/bg bmc.jpg');
     background-repeat: no-repeat;
      background-position: center;
      background-size:cover;
@@ -71,7 +71,7 @@ body{
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
-    background-image: url(./image/hamberg.png);
+    background-image: url(../../image/hamberg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
