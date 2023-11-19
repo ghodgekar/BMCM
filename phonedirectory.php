@@ -1,4 +1,10 @@
-<?php $activePage = "phone_directory";include 'header.php';?>
+<?php 
+$activePage = "phone_directory";
+include 'header.php';
+require_once "config/db.php";
+$sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='3' ";
+$result = mysqli_query($mysqli, $sql);
+?>
 <style>
 .table_blur tbody td {
   color: transparent;
@@ -23,21 +29,20 @@
   <?php
     if (isset($_SESSION['member_username'])) {
   ?>
-    <div class="d-flex justify-content-end">
+    <!-- <div class="d-flex justify-content-end">
         <div class="input-group">
             <div class="form-outline">
                 <input type="search" id="form1" class="form-control" style="width: 250px;border: 2px solid #ed0500;margin: 2px" />
-                <!-- <label class="form-label" for="form1">Search</label> -->
             </div>
             <button type="button" class="btn btn-primary" style="background-color: #ed0500; color: #fff;">
                 <i class="fas fa-search">Search</i>
             </button>
         </div>
     </div>
-    <hr>
-    <table class="table">
+    <hr> -->
+    <table class="table" id="approveTbl">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th scope="col">#</th>
                 <th scope="col">Full Name</th>
                 <th scope="col">Department</th>
@@ -47,75 +52,37 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
-            <tr>
-
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
-            <tr>
-
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
-            <tr>
-
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
-            <tr>
-
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
-            <tr>
-
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
-            <tr>
-
-                <td>1</td>
-                <td>abc</td>
-                <td>md</td>
-                <td>123456789</td>
-                <td>abc@gmail.com</td>
-                <td>mumbai
-                <td>
-            </tr>
+            <?php
+                $count = 1;
+                while ($row = mysqli_fetch_assoc($result)) {
+                $name = $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
+                $email = $row['email'];
+                $mobile = $row['mobile_no'];
+                $department = $row['department'];
+                $address = $row['current_address'];
+            ?>
+                <tr class="text-center">
+                    <th scope="row">
+                        <?php echo $count; ?>
+                    </th>
+                    <td>
+                        <?php echo $name; ?>
+                    </td>
+                    <td>
+                        <?php echo $department; ?>
+                    </td>
+                    <td>
+                        <?php echo $mobile; ?>
+                    </td>
+                    <td>
+                        <?php echo $email; ?>
+                    </td>
+                    <td>
+                        <?php echo $address; ?>
+                    </td>
+                </tr>
+                <?php $count++;
+            } ?>
         </tbody>
     </table>
   <?php
@@ -213,3 +180,9 @@
 
 
 <?php include 'footer.php';?>
+
+<script>
+    $(document).ready(function () {
+        $('#approveTbl').DataTable();
+    });
+</script>
