@@ -55,6 +55,9 @@ session_start();
               <a class="nav-link <?php if ($activePage =="phone_directory") {?> active <?php } ?>" href="phonedirectory.php">Phone Directory </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link <?php if ($activePage =="executive_committee") {?> active <?php } ?>" href="executive_committee.php">Executive_Committee </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="news_media") {?> active <?php } ?>" href="news_media.php">News & Media </a>
             </li>
             <li class="nav-item dropdown">
