@@ -39,7 +39,7 @@ $result = mysqli_query($mysqli, $sql);
                     <td><?php echo $subject; ?></td>
                     <td>
                         <button type="button" class="btn btn-primary editAnnouncement announcementBtn" data-type="edit" data-id="<?php echo $row['id']; ?>">Edit</button>
-                        <button type="button" class="btn btn-danger">Delete </button>
+                        <button type="button" class="btn btn-danger deleteAnnouncementBtn" data-id="<?php echo $row['id']; ?>">Delete </button>
                     </td>
                 </tr>
             <?php 

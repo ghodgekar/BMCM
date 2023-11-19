@@ -200,14 +200,14 @@ $(document).ready(function () {
                 url: 'announcement_data_ajax.php',
                 data: { 'id': id },
                 success: function (response) {
-                    var data = JSON.parse( response );
+                    var data = JSON.parse(response);
                     $("#date").val(data.data.date);
                     $("#time").val(data.data.time);
                     $("#place").val(data.data.place);
                     $("#subject").val(data.data.subject);
                 }
             });
-        }else{
+        } else {
             $(".announcementBtnTxt").text('Add Event');
             $("#date").val('');
             $("#time").val('');
@@ -215,5 +215,28 @@ $(document).ready(function () {
             $("#subject").val('');
         }
         $('#exampleModal').modal('show');
+    })
+
+    $(".deleteAnnouncementBtn").click(function () {
+        var id = $(this).data("id");
+        if (!confirm("Do you want to delete")) {
+            return false;
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'announcement_ajax.php',
+            data: { 'id': id, 'posttype': 'delete' },
+            success: function (response) {
+                if (response.status == 0) {
+                    $(".msg").addClass("error-span");
+                    $(".msg").removeClass("success-span");
+                } else {
+                    window.location.href = 'announcement.php';
+                    $(".msg").addClass("success-span");
+                    $(".msg").removeClass("error-span");
+                }
+                $('.msg').text(response.message);
+            }
+        });
     })
 });
