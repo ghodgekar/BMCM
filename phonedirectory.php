@@ -171,6 +171,9 @@ $result = mysqli_query($mysqli, $sql);
             </tr>
         </tbody>
     </table>
+    <div class="logintxt text-center">
+        <h3>Please Login</h3>
+    </div>
   <?php
    }
   ?>
