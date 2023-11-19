@@ -13,7 +13,7 @@ $result = mysqli_query($mysqli, $sql);
         <th scope="col">Full Name</th>
         <th scope="col">Email id</th>
         <th scope="col">Mobile No</th>
-        <th scope="col">Address</th>
+           <th scope="col">Address</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
