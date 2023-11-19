@@ -3,6 +3,24 @@ session_start();
 if(!isset($_SESSION['username'])){
   header('Location: index.php');
 }
+
+require_once "../config/db.php";
+$approveCountresult = mysqli_query($mysqli, "SELECT count(id) FROM candidate_data WHERE is_active='1' and status='3'");
+$approveCountrow = mysqli_fetch_array($approveCountresult);
+$approveCount = $approveCountrow[0];
+
+$pendingresult = mysqli_query($mysqli, "SELECT count(id) FROM candidate_data WHERE is_active='1' and status='1'");
+$pendingrow = mysqli_fetch_array($pendingresult);
+$pendingCount = $pendingrow[0];
+
+$paymentCountresult = mysqli_query($mysqli, "SELECT count(id) FROM candidate_data WHERE is_active='1' and status='2'");
+$paymentCountrow = mysqli_fetch_array($paymentCountresult);
+$paymentCount = $paymentCountrow[0];
+
+$rejectCountresult = mysqli_query($mysqli, "SELECT count(id) FROM candidate_data WHERE is_active='1' and status='4'");
+$rejectCountrow = mysqli_fetch_array($rejectCountresult);
+$rejectCount = $rejectCountrow[0];
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -45,25 +63,25 @@ if(!isset($_SESSION['username'])){
             padding-top: 25px;
             border-bottom: 5px rgb(253, 203, 2) solid;
             color:rgb(253, 203, 2);
-            width: 212px;">Pending</a>
+            width: 212px;">Pending <br> <?php echo $pendingCount; ?></a>
             <a class="nav-link shadow-lg p-3 mb-5 bg-body rounded" href="payment.php" style="margin-left: 24px;
             height: 100px;
             padding-top: 25px;
             border-bottom: 5px orange solid;
             color:orange;
-            width: 212px; ">Payment</a>
+            width: 212px; ">Payment <br> <?php echo $paymentCount; ?></a>
             <a class="nav-link active shadow-lg p-3 mb-5 bg-body rounded" aria-current="page" href="approve.php" style="margin-left: 24px;
             height: 100px;
             padding-top: 25px;
             border-bottom: 5px green solid;
             color: green;
-            width: 212px;">Approved</a>
+            width: 212px;">Approved <br> <?php echo $approveCount; ?></a>
             <a class="nav-link active shadow-lg p-3 mb-5 bg-body rounded" aria-current="page" href="rejected.php" style="margin-left: 24px;
             height: 100px;
             padding-top: 25px;
             border-bottom: 5px red solid;
             color: red;
-            width: 212px;">Rejected</a>
+            width: 212px;">Rejected <br> <?php echo $rejectCount; ?></a>
 
             <a class="nav-link active " aria-current="page" href="announcement.php" style="margin-left:5px;
             height: 100px;

@@ -10,14 +10,21 @@ $response = array(
     'status' => $_POST,
     'message' => 'Form submission failed, please try again.',
 );
-$sql = "UPDATE candidate_data SET status=$_POST[status] WHERE id=$_POST[id]";
+$reason = NULL;
+$created_by = NULL;
+if(isset($_POST['reason'])){
+    $reason = $_POST['reason'];
+    $created_by = $_POST['created_by'];
+}
+
+$sql = "UPDATE candidate_data SET status='$_POST[status]', reason='$reason', created_by='$created_by' WHERE id=$_POST[id]";
 
 if ($mysqli->query($sql) === TRUE) {
     $response['status'] = 1;
     $response['message'] = 'Record updated successfully';
 } else {
     $response['status']  = 0;
-    $response['message'] = "Error updating record: " . $mysqli->error;
+    $response['message'] = "Error updating record: " .$sql;
 }
 
 // Return response
