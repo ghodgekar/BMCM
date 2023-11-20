@@ -27,9 +27,13 @@
         <thead>
         </thead>
         <tbody>
-        <tr>
+            <tr>
+            <th rowspan="2"><img src="..." class="img-fluid" alt="..."></th>
+</tr>
+        <tr >
+     
             <th scope="row">id</th>
-            <td colspan="3"><?php echo $reg_no; ?> </td>
+            <td colspan="2" ><?php echo $reg_no; ?> </td>
         </tr>
         <tr>
             <th scope="row">Full Name</th>
@@ -70,7 +74,7 @@
         </tr>
         <tr>
             <th scope="row"> Member No</th>
-            <td><?php echo $recommender_member_no; ?></td>
+            <td colspan="3"><?php echo $recommender_member_no; ?></td>
         </tr>
         <tr>
             <th scope="row">Gpay/phonepe/netbanking/paytm</th>

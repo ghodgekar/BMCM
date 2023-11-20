@@ -42,8 +42,8 @@
     width: 100%;
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
     clear: both;
-    font-weight: 400;
-    color: #0016ed;
+    font-weight: 500;
+    color: #ed0500;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -188,7 +188,7 @@
 
 .card-title {
 
-    font-size: 22px;
+    font-size: 20px;
     color: red;
     font-weight: 500;
 }

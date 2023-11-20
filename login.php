@@ -4,8 +4,7 @@
     header('Location: index.php');
   }
 ?>
-  <div class="container-fluid" style="background-color:#ffc107;; height:220px">
-  </div>
+  
   <section class=>
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100" style="padding:px;">

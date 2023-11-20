@@ -19,7 +19,7 @@ session_start();
 <body>
   <div class="d-flex justify-content-between" style="background-color: #ed0500;">
     <div class="p-2 bd-highlight"><a href="https://wa.me/+919833615551"><img src="./image/whataap.png" class="img-fluid"
-          alt="..."></a></div>
+          alt="..." style="margin-left: 47px;"></a></div>
       <?php 
         if(!isset($_SESSION['member_username'])){
       ?>
@@ -46,8 +46,21 @@ session_start();
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="index") {?> active <?php } ?>" aria-current="page" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="about") {?> active <?php } ?>" href="about.php">About Us</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About us
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Journey.php">Journery</a></li>
+                <li><a class="dropdown-item" href="logo.php">Logo</a></li>
+
+                <li><a class="dropdown-item" href="executive_committee.php">Executive_Committee </a></li>
+                
+
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="events") {?> active <?php } ?>" href="events.php">Events & Seminars </a>
@@ -55,9 +68,9 @@ session_start();
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="phone_directory") {?> active <?php } ?>" href="phonedirectory.php">Phone Directory </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="executive_committee") {?> active <?php } ?>" href="executive_committee.php">Executive_Committee </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="news_media") {?> active <?php } ?>" href="news_media.php">News & Media </a>
             </li>
@@ -77,6 +90,9 @@ session_start();
 
               </ul>
             </li>
+
+           
+
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="contact") {?> active <?php } ?>" href="contact.php">Contact Us</a>
             </li>

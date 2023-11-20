@@ -11,12 +11,7 @@ $result = mysqli_query($mysqli, $sql);
   text-shadow: 0 0 7px #a09f9d;
 }
 </style>
-<div class="hero-image" style="background-image:url(./image/about.jpg)
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;">
+<div class="hero-image">
     <div class="hero-text">
         <h1 style="color:red">Phone Directory</h1>
         <!-- <p>And I'm a Photographer</p>
@@ -172,7 +167,7 @@ $result = mysqli_query($mysqli, $sql);
         </tbody>
     </table>
     <div class="logintxt text-center">
-        <h3>Please Login</h3>
+        <h3><a href="login.php"style="text-decoration:none;color:red">Please Login<a></h3>
     </div>
   <?php
    }

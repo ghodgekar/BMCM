@@ -1,10 +1,5 @@
 <?php $activePage = "events"; include 'header.php'; ?>
-<div class="hero-image" style="background-image:url(./image/about.jpg)
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;">
+<div class="hero-image">
   <div class="hero-text">
     <h1 style="color:red">Events & Seminars</h1>
     <!-- <p>And I'm a Photographer</p>
