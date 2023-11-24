@@ -70,7 +70,7 @@
     </div>
     <div class="col">
       <div class="card h-100 text-center shadow-sm p-3 mb-5 bg-body rounded">
-        <img src="./image/profile.png" class="card-img-top" alt="...">
+        <img src="./image/Narayan Haribhau Meghare.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">श्री नारायण हरिभाऊ मेघारे</h5>
           <p class="card-text">सह खजिनदार</p>
@@ -115,7 +115,7 @@
     </div>
         <div class="col">
       <div class="card h-100 text-center shadow-sm p-3 mb-5 bg-body rounded">
-        <img src="./image/profile.png" class="card-img-top" alt="...">
+        <img src="./image/Deepak Nilkanthrao Nagarsoge.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">श्री दीपक नीलकंठराव नागरसोगे</h5>
           <p class="card-text">सदस्य</p>

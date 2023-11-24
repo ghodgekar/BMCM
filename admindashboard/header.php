@@ -41,7 +41,7 @@ $rejectCount = $rejectCountrow[0];
 <body>
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <div class="container shadow-lg p-3 mb-5 bg-body rounded" style="background-color:rgb(230, 226, 221);padding:25px">
+  <div class="container-fluid shadow-lg p-3 mb-5 bg-body rounded" style="background-color:rgb(230, 226, 221);padding:25px">
     <div class="container " style="background-color:rgb(226, 226, 226);padding:25px;">
       <div class="d-flex justify-content-between">
         <div class="p-2 bd-highlight"><span><b>Admin Name : </b><?php echo $_SESSION['name']; ?></span><br>
@@ -50,6 +50,8 @@ $rejectCount = $rejectCountrow[0];
         <div class="p-2 bd-highlight" style="color: red; font-size: 21px;"><a href="logout.php" class="btn btn-danger">Log Out</a></div>
       </div>
     </div>
+
+    <div class="container">
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid" style="height: 158px;border-bottom: #0d6efd 2px solid;">
         <a class="navbar-brand" href="#"><img src="./image/logo.jpg"></a>
@@ -91,3 +93,4 @@ $rejectCount = $rejectCountrow[0];
         </div>
       </div>
     </nav>
+</div>

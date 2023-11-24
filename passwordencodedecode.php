@@ -1,10 +1,10 @@
 <?php
-$str = 'treasurermmss@123';
+$str = 'admin@123';
 $encodeText = base64_encode($str);
 echo "Encode Text: " . $encodeText."<br>";
 
 
-$str1 = 'dHJlYXN1cmVybW1zc0AxMjM=';
+$str1 = 'YWRtaW5AMTIz';
 $decodeText = base64_decode($str1);
 echo "Decode Text: " . $decodeText;
 

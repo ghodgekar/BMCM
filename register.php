@@ -30,7 +30,7 @@
                     सभासद होण्याची माझी इच्छा
                     आहे व त्यासाठी असणारे आजीवन सभासद शुल्क/वार्षिक सभासद शुल्क भरण्यास मी तयार आहे.</p>
                   
-                  <p><b>माझी वैयक्तिक माक्तिती खालील प्रमाणे:-</b></p>
+                  <p><b>माझी वैयक्तिक माहिती खालीलप्रमाणे</b></p>
                   <div class="row">
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
@@ -72,16 +72,22 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-4 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1m1" class="form-control form-control-lg" name="mobile_no"placeholder="Mobile No/दूरध्वनी क्रमांक"  style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1m1">Mobile No/दूरध्वनी क्रमांक:-</label> -->
                       </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-4 mb-4">
                       <div class="form-outline">
                         <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="emp_id" placeholder="Employee ID/कममचारी संकेतांक"  style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1n1">Employee ID/कममचारी संकेतांक</label> -->
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" name="date-of-birth" placeholder="DOB/जन्मतारीख " style="font-size:15px" />
+                        <!-- <label class="form-label" for="form3Example1n">Department/खाते</label> -->
                       </div>
                     </div>
                   </div>

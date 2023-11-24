@@ -37,12 +37,6 @@
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.validate.js"></script>
-<<<<<<< HEAD
-<!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
-<script src="assets/js/main.js"></script>
-
-=======
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
->>>>>>> 772ed2099c11b14a52cbf38c183d824f70dd01d9

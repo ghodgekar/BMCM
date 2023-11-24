@@ -15,6 +15,7 @@ session_start();
   <link href="assets/css/news.css" rel="stylesheet">
   <link href="assets/css/header.css" rel="stylesheet">
   <link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+  
 </head>
 <body>
   <div class="d-flex justify-content-between" style="background-color: #ed0500;">
