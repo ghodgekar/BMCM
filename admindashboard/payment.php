@@ -4,7 +4,7 @@ require_once "../config/db.php";
 $sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='2' ";
 $result = mysqli_query($mysqli, $sql);
 ?>
-
+<a href='excel_report.php' target='_blank'>Open Excel</a>
 <div class="container">
   <br>
 <table class="table" id="paymentTbl">

@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n" class="form-control form-control-lg" name="l_name"  placeholder="Last name/आडनाव " style="font-size:15px"/>
+                        <input type="text" id="form3Example11" class="form-control form-control-lg" name="l_name"  placeholder="Last name/आडनाव " style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1n">Last name/आडनाव</label> -->
                       </div>
                     </div>
@@ -54,19 +54,19 @@
                   <div class="row">
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1m" class="form-control form-control-lg" name="position" placeholder="Position/पद/हुद्दा "  style="font-size:15px"/>
+                        <input type="text" id="form3Example12" class="form-control form-control-lg" name="position" placeholder="Position/पद/हुद्दा "  style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1m">Position/पद/हुद्दा</label> -->
                       </div>
                     </div>
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n" class="form-control form-control-lg" name="division"  placeholder="Division/विभाग " style="font-size:15px"/>
+                        <input type="text" id="form3Example1n3" class="form-control form-control-lg" name="division"  placeholder="Division/विभाग " style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1n">Division/विभाग</label> -->
                       </div>
                     </div>
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n" class="form-control form-control-lg" name="department" placeholder="Department/खाते " style="font-size:15px" />
+                        <input type="text" id="form3Example1n4" class="form-control form-control-lg" name="department" placeholder="Department/खाते " style="font-size:15px" />
                         <!-- <label class="form-label" for="form3Example1n">Department/खाते</label> -->
                       </div>
                     </div>
@@ -74,19 +74,19 @@
                   <div class="row">
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg" name="mobile_no"placeholder="Mobile No/दूरध्वनी क्रमांक"  style="font-size:15px"/>
+                        <input type="text" id="form3Example1m15" class="form-control form-control-lg" name="mobile_no"placeholder="Mobile No/दूरध्वनी क्रमांक"  style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1m1">Mobile No/दूरध्वनी क्रमांक:-</label> -->
                       </div>
                     </div>
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="emp_id" placeholder="Employee ID/कममचारी संकेतांक"  style="font-size:15px"/>
+                        <input type="text" id="form3Example1n16" class="form-control form-control-lg" name="emp_id" placeholder="Employee ID/कममचारी संकेतांक"  style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1n1">Employee ID/कममचारी संकेतांक</label> -->
                       </div>
                     </div>
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n" class="form-control form-control-lg" name="date-of-birth" placeholder="DOB/जन्मतारीख " style="font-size:15px" />
+                        <input type="text" id="form3Example1n7" class="form-control form-control-lg" name="date-of-birth" placeholder="DOB/जन्मतारीख " style="font-size:15px" />
                         <!-- <label class="form-label" for="form3Example1n">Department/खाते</label> -->
                       </div>
                     </div>
@@ -100,19 +100,19 @@
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg"
+                        <input type="text" id="form3Example1n18" class="form-control form-control-lg"
                           name="blood_grup" placeholder="Blood Group/रक्तगट " style="font-size:15px" />
                         <!-- <label class="form-label" for="form3Example1n1">Blood Group/रक्तगट</label> -->
                       </div>
                     </div>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg"
+                    <input type="text" id="form3Example979" class="form-control form-control-lg"
                       name="permanent_address" placeholder="Address/मूळ गावचा पत्ता"  style="font-size:15px"/>
                     <!-- <label class="form-label" for="form3Example97">Address/मूळ गावचा पत्ता</label> -->
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg"
+                    <input type="text" id="form3Example970" class="form-control form-control-lg"
                       name="current_address"  placeholder="Current Address/सध्याचे वास्तव्याचा पत्ता"  style="font-size:15px"/>
                     <!-- <label class="form-label" for="form3Example97"> Current Address/सध्याचे वास्तव्याचा पत्ता</label> -->
                   </div>
@@ -120,13 +120,13 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg" name="password" placeholder=" Create Password" style="font-size:15px"/>
+                        <input type="text" id="form3Example1m12" class="form-control form-control-lg" name="password" placeholder=" Create Password" style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1m1">Create Password</label> -->
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg"name="password_confirm" placeholder="Confirm Password" style="font-size:15px" />
+                        <input type="text" id="form3Example1n14" class="form-control form-control-lg"name="password_confirm" placeholder="Confirm Password" style="font-size:15px" />
                         <!-- <label class="form-label" for="form3Example1n1">Confirm Password</label> -->
                       </div>
                     </div>
@@ -180,14 +180,14 @@
                   <div class="row">
                     <div class="col-md-12 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"
+                        <input type="text" id="form3Example1m11" class="form-control form-control-lg"
                           name="recommender_name" placeholder="Name of Recommender/शिफारस करणाऱ्याचे नाव"  style="font-size:15px"/>
                         
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg"
+                        <input type="text" id="form3Example1n21" class="form-control form-control-lg"
                           name="recommender_mobile_no"  placeholder=" Mobile No/मोबाईल नंबर" style="font-size:15px"/>
                         
                       </div>
@@ -196,7 +196,7 @@
                     
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg"
+                        <input type="text" id="form3Example1n31" class="form-control form-control-lg"
                           name="recommender_member_no" placeholder="Member No/सभासद क्र." style="font-size:15px" />
                         
                       </div>
@@ -236,7 +236,7 @@
                   <p><b>शुल्क भरल्याचा तपशील :-</b></p>
 
                   <div class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM" name="fees_type" style="font-size:15px"/>
+                    <input type="text" id="form3Example597" class="form-control form-control-lg" placeholder="Cheque/Netbanking/GPay/PhonePay/PayTM" name="fees_type" style="font-size:15px"/>
                     <label class="form-label" for="form3Example97"> <span
                         style="font-size:12px">(Mode Of Payment)</span>
                     </label>
@@ -246,13 +246,13 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"  placeholder="Transaction ID" name="fees_transaction_id" style="font-size:15px"/>
+                        <input type="text" id="form3Example51m1" class="form-control form-control-lg"  placeholder="Transaction ID" name="fees_transaction_id" style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1m1">Transaction ID</label> -->
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" placeholder="शुल्क भरल्याची दिनांक" name="fees_date" style="font-size:15px"/>
+                        <input type="text" id="form3Example51n1" class="form-control form-control-lg" placeholder="शुल्क भरल्याची दिनांक" name="fees_date" style="font-size:15px"/>
                         <!-- <label class="form-label" for="form3Example1n1">शुल्क भरल्याची दिनांक</label> -->
                       </div>
                     </div>
