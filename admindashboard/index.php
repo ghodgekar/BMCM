@@ -43,7 +43,7 @@
                     <div class="text-center pt-1 mb-5 pb-1">
                       <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 submitBtn" type="submit" style="width:180px">Log
                         in</button><br>
-                      <a class="text-muted" href="#!">Forgot password?</a>
+                      <a class="text-muted" href="forgotpassword.php">Forgot password?</a>
                     </div>
                   </form>
 

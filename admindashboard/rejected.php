@@ -5,6 +5,9 @@ $sql = "SELECT * FROM candidate_data WHERE is_active='1' and status ='4' ";
 $result = mysqli_query($mysqli, $sql);
 ?>
 <div class="container">
+    <div class="text-right" style="text-align: right;">
+      <a href='excel_report.php?s=4' class="btn btn-success" target='_blank'>Open Excel</a>
+    </div>
     <br>
     <table class="table" id="rejectTbl">
         <thead>

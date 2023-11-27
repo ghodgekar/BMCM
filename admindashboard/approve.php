@@ -6,6 +6,9 @@ $result = mysqli_query($mysqli, $sql);
 ?>
 
 <div class="container">
+    <div class="text-right" style="text-align: right;">
+      <a href='excel_report.php?s=3' class="btn btn-success" target='_blank'>Open Excel</a>
+    </div>
     <br>
     <table class="table" id="approveTbl">
         <thead>

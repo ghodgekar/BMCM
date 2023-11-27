@@ -28,7 +28,7 @@
                   Remember me
                 </label>
               </div> -->
-              <a href="#!" class="text-body">Forgot password?</a>
+              <a href="forgotpassword.php" class="text-body">Forgot password?</a>
             </div>
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="submit" class="btn btn-primary btn-lg submitBtn" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>

@@ -239,4 +239,49 @@ $(document).ready(function () {
             }
         });
     })
+
+        //forgotpassword form
+        $("#forgotpwdform").validate({
+            rules: {
+                email: { required: true },
+                password: {
+                    required: true,
+                    minlength: 5
+                }
+            },
+            messages: {
+                email: { required: "Please Enter Valid Email" },
+                mobile_no: { minlength: "mobile only 10 digit" }
+    
+            },
+            onfocusout: function (element) {
+                this.element(element);
+            },
+            submitHandler: function (form) {
+                $.ajax({
+                    type: form.method,
+                    url: form.action,
+                    data: new FormData(form),
+                    dataType: 'json',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    beforeSend: function () {
+                        $('.submitBtn').attr("disabled", "disabled");
+                        $('#forgotpwdform').css("opacity", ".5");
+                    },
+                    success: function (response) {
+                        $('.submitBtn').removeAttr("disabled");
+                        $('#forgotpwdform').css("opacity", "1");
+                        if (response.status == 0) {
+                            $(".msg").addClass("error-span");
+                        } else {
+                            $(".msg").addClass("success-span");
+                            window.location.href = response.url;
+                        }
+                        $('.msg').text(response.message);
+                    }
+                });
+            }
+        });
 });

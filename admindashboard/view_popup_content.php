@@ -48,6 +48,9 @@ $fees_date = $row['fees_date'];
     font-size: .875rem;
     font-weight: 600;
   }
+  .form-control:disabled, .form-control[readonly]{
+    background: #fff;
+  }
 </style>
 
 
@@ -103,7 +106,7 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputtext" class="col-sm-4 col-form-label-sm">1.संपूर्ण नाव :-</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="input">
+            <input type="text" class="form-control" value="<?php echo $name; ?>" readonly>
           </div>
         </div>
         <!--row end-->
@@ -112,7 +115,7 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputtext" class="col-sm-4 col-form-label-sm">२.मराठा/कुणबी/कुणबी मराठा:-</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="input">
+            <input type="text" class="form-control" id="input" value="<?php echo $name; ?>" readonly>
           </div>
         </div>
         <!--row end-->
@@ -122,19 +125,19 @@ $fees_date = $row['fees_date'];
           <label for="input" class="col-sm-2 col-form-label-sm">3.पद/ हुद्दा :-</label>
 
           <div class="col-sm-2">
-            <input type="text" id="inputtext" class="form-control">
+            <input type="text" id="inputtext" class="form-control"  value="<?php echo $position; ?>" readonly>
 
           </div>
           <label for="inputtext" class="col-sm-2 col-form-label-sm">विभाग :-</label>
 
           <div class="col-sm-2">
-            <input type="text" id="inputPassword6" class="form-control">
+            <input type="text" id="inputPassword6" class="form-control"  value="<?php echo $division; ?>" readonly>
           </div>
 
           <label for="inputPassword6" class="col-sm-2 col-form-label-sm">खाते :-</label>
 
           <div class="col-sm-2">
-            <input type="text" id="inputPassword6" class="form-control">
+            <input type="text" id="inputPassword6" class="form-control"  value="<?php echo $department; ?>" readonly>
           </div>
 
         </div><br>
@@ -146,11 +149,11 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">४.दूरध्वनी क्रमांक :-</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $mobile_no; ?>" readonly id="inputEmail3">
           </div>
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">५.कर्मचारी संकेतांक :-</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $emp_id; ?>" readonly id="inputEmail3">
           </div>
         </div>
 
@@ -161,12 +164,12 @@ $fees_date = $row['fees_date'];
 
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-2 col-form-label-sm">६.ई-मेल आयडी :-</label>
-          <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEmail3">
+          <div class="col-sm-5">
+            <input type="text" class="form-control"  value="<?php echo $email; ?>" readonly id="inputEmail3">
           </div>
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">७.रक्तगट :-</label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputEmail3">
+          <div class="col-sm-2">
+            <input type="text" class="form-control"  value="<?php echo $blood_grup; ?>" readonly id="inputEmail3">
           </div>
         </div>
         <!--row end-->
@@ -174,7 +177,7 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">८.मूळ गावचा पत्ता :-</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $permanent_address; ?>" readonly id="inputEmail3">
           </div>
         </div>
         <!--row end-->
@@ -182,20 +185,20 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">९.सध्याचे वास्तव्याचा पत्ता :-</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $address; ?>" readonly id="inputEmail3">
           </div>
         </div>
         <!--row end-->
 
         <p class="text-center">संस्थेचा सभासद म्हणून मला स्वीकारावे, ही विनंती.</p>
-        <div class="d-flex justify-content-end">
-          <div class="col-sm-4"><input type="text" class="form-control" id="inputEmail3"></div>
+        <!-- <div class="d-flex justify-content-end">
+          <div class="col-sm-4"><input type="text" class="form-control"  value="<?php echo $name; ?>" readonly id="inputEmail3"></div>
         </div>
         <div class="d-flex justify-content-end">
           <p><b style="padding: 15px;
     padding-right: 53px;
 ">अर्जदाराची सही </b></p>
-        </div>
+        </div> -->
 
         <hr>
 
@@ -205,21 +208,21 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-4 col-form-label-sm"> १०.शिफारस करणाऱ्याचे नाव- श्री./श्रीम.</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $recommender_name; ?>" readonly id="inputEmail3">
           </div>
-          <label for="inputEmail3" class="col-sm-1 col-form-label-sm">दि .</label>
+          <!-- <label for="inputEmail3" class="col-sm-1 col-form-label-sm">दि .</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEmail3">
-          </div>
+            <input type="text" class="form-control" readonly id="inputEmail3">
+          </div> -->
         </div>
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-1 col-form-label-sm">मो.</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $recommender_mobile_no; ?>" readonly id="inputEmail3">
           </div>
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">सभासद क्र.</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $recommender_member_no; ?>" readonly id="inputEmail3">
           </div>
         </div>
 
@@ -227,14 +230,14 @@ $fees_date = $row['fees_date'];
 
         <p>मी वरील अर्जदार यांना ओळखतो/ओळखते. ते मराठा/कुणबी/कुणबी मराठा आहेत. संस्थेच्या सभासद होण्यासाठी मी
           त्यांची शिफारस करतो/करते.</p>
-        <div class="d-flex justify-content-end">
-          <div class="col-sm-4"><input type="text" class="form-control" id="inputEmail3"></div>
+        <!-- <div class="d-flex justify-content-end">
+          <div class="col-sm-4"><input type="text" class="form-control"  value="<?php echo $name; ?>" readonly id="inputEmail3"></div>
         </div>
         <div class="d-flex justify-content-end">
           <p><b style="padding: 15px;
     padding-right: 53px;
 ">शिफारस करणाऱ्याची सही</b></p>
-        </div>
+        </div> -->
 
 
         <hr>
@@ -244,7 +247,7 @@ $fees_date = $row['fees_date'];
           <label for="inputEmail3" class="col-sm-5 col-form-label-sm">११. Mode Of Payment
             (Netbanking/GPay/PhonePay/PayTM):-</label>
           <div class="col-sm-7">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $fees_type; ?>" readonly id="inputEmail3">
           </div>
         </div>
         <!--row end-->
@@ -254,11 +257,11 @@ $fees_date = $row['fees_date'];
         <div class="row mb-1">
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">१२. Transaction ID :-</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $fees_transaction_id; ?>" readonly id="inputEmail3">
           </div>
           <label for="inputEmail3" class="col-sm-3 col-form-label-sm">१३. शुल्क भरल्याची दिनांक :-</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control"  value="<?php echo $fees_date; ?>" readonly id="inputEmail3">
           </div>
         </div>
 
