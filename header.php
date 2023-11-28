@@ -57,10 +57,7 @@ session_start();
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="Journey.php">Journery</a></li>
                 <li><a class="dropdown-item" href="logo.php">Logo</a></li>
-
                 <li><a class="dropdown-item" href="executive_committee.php">Executive_Committee </a></li>
-                
-
               </ul>
             </li>
             <li class="nav-item">
@@ -88,16 +85,14 @@ session_start();
 
                 <li><a class="dropdown-item" href="#">Women</a></li>
                 <li><a class="dropdown-item" href="others.php">Other</a></li>
-
               </ul>
             </li>
-
-           
-
             <li class="nav-item">
               <a class="nav-link <?php if ($activePage =="contact") {?> active <?php } ?>" href="contact.php">Contact Us</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link <?php if ($activePage =="donation") {?> active <?php } ?>" href="donation.php">Donation</a>
+            </li>
           </ul>
           <button type="button" class="btn btn-warning"><a href="communityshop.php" style="color: #ffffff; text-decoration: none;">Community Shop</a></button>
         </div>

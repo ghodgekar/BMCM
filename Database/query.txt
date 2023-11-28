@@ -6,3 +6,21 @@ ALTER TABLE `announcement` ADD `is_active` INT NOT NULL DEFAULT '1' AFTER `time`
 
 //
 ALTER TABLE `announcement` CHANGE `time` `time` VARCHAR(100) NOT NULL;
+
+//28-11-2023
+CREATE TABLE `donation_data` (
+  `id` int(11) NOT NULL,
+  `donar_name` varchar(200) NOT NULL,
+  `donar_mobile` varchar(50) NOT NULL,
+  `donar_amt` varchar(100) NOT NULL,
+  `created_by` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+ALTER TABLE `donation_data`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `donation_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;

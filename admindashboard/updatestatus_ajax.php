@@ -20,6 +20,17 @@ if(isset($_POST['reason'])){
 $sql = "UPDATE candidate_data SET status='$_POST[status]', reason='$reason', created_by='$created_by' WHERE id=$_POST[id]";
 
 if ($mysqli->query($sql) === TRUE) {
+    if($_POST['status'] == '3'){
+        $sql_1 = "SELECT * FROM candidate_data WHERE id=$_POST[id]";
+        $result_1 = mysqli_query($mysqli, $sql_1);
+        $row_1 = mysqli_fetch_assoc($result_1);
+        $email = $row_1['email'] ;
+        $to = $email;
+        $subject = "Member Approval";
+        $txt = "Dear Member, your membership is approved by admin. Please login...";
+        $headers = "From: contact@marathamandal.com";
+        mail($to,$subject,$txt,$headers);
+    }
     $response['status'] = 1;
     $response['message'] = 'Record updated successfully';
 } else {
