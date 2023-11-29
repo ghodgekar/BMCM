@@ -1,3 +1,33 @@
+<?php
+session_start();
+if (!isset($_SESSION['member_id'])) {
+    header('Location: ../index.php');
+}
+require_once "../config/db.php";
+$sql = "SELECT * FROM candidate_data WHERE is_active='1' and id='$_SESSION[member_id]'";
+$result = mysqli_query($mysqli, $sql);
+$row = mysqli_fetch_assoc($result);
+$reg_no = $row['reg_no'];
+$id = $row['id'];
+$name = $row['f_name'] . " " . $row['m_name'] . " ". $row['l_name'];
+$position = $row['position'];
+$dob = $row['dob'];
+$blood_grup = $row['blood_grup'];
+$division = $row['division'];
+$department = $row['department'];
+$emp_id = $row['emp_id'];
+$mobile_no = $row['mobile_no'];
+$email = $row['email'];
+$permanent_address = $row['permanent_address'];
+$current_address = $row['current_address'];
+$recommender_name = $row['recommender_name'];
+$recommender_mobile_no = $row['recommender_mobile_no'];
+$recommender_member_no = $row['recommender_member_no'];
+$fees_type = $row['fees_type'];
+$fees_transaction_id = $row['fees_transaction_id'];
+$fees_date = $row['fees_date'];
+$password = $row['password'];
+?>
 <!doctype html>
 <html lang="en">
 
@@ -41,21 +71,21 @@
                 <p class="text-center"><b>सभासद ओळखपत्र</b></p>
                 <hr>
                 <div class="col-md-3">
-                    <img src="./image/pic.jpg" class="img-fluid rounded-start" alt="..." style="padding: 5px;">
+                    <img src="../uploads/<?php echo $reg_no; ?>/0_<?php echo $reg_no; ?>.jpg" class="img-fluid rounded-start" id="profile-pic"style="padding: 5px; width:150px">
                     <p style="font-weight: 600;
     font-size: 13px;
-    text-align: center;">सदस्यत्व क्रमांक : २४</p>
+    text-align: center;">सदस्यत्व क्रमांक : <?php echo $reg_no; ?></p>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body" style="padding: 0.2rem 0.2rem">
                         <ul style="font-size: 12px;
     list-style: none;padding-left: 0rem;">
-                            <li><b>नाव :</b> वैभव निंबाळकर</li>
-                            <li><b>विभाग :</b> अभियंता</li>
-                            <li><b>जन्मतारीख :</b> १५ ऑगस्ट १९८५</li>
-                            <li><b>मोबाइल नं :</b> ८७८८२ २७८२५</li>
-                            <li><b>पत्ता : </b>सी - २२९, जागृती नगर, घाटकोपर, पश्चिम, मुंबई - ७८</li>
-                            <li><b>रक्तगट : </b>AB+</li>
+                            <li><b>नाव :</b> <?php echo $name; ?></li>
+                            <li><b>विभाग :</b> <?php echo $department; ?></li>
+                            <li><b>जन्मतारीख :</b> <?php echo $dob; ?></li>
+                            <li><b>मोबाइल नं :</b> <?php echo $mobile_no; ?></li>
+                            <li><b>पत्ता : </b> <?php echo $current_address; ?></li>
+                            <li><b>रक्तगट : </b> <?php echo $blood_grup; ?></li>
                         </ul>
 
                         <div class="d-flex flex-row-reverse bd-highlight"
@@ -70,7 +100,8 @@
 
                         </div>
                         <div class="d-flex justify-content-end" style="margin-inline-end: -32px;">
-                            <span><b>www.marathamandal.com<b></span></div>
+                            <span><b>www.marathamandal.com<b></span>
+                        </div>
 
                     </div>
                 </div>

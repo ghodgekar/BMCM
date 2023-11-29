@@ -21,6 +21,11 @@ $rejectCountresult = mysqli_query($mysqli, "SELECT count(id) FROM candidate_data
 $rejectCountrow = mysqli_fetch_array($rejectCountresult);
 $rejectCount = $rejectCountrow[0];
 
+$donationresult = mysqli_query($mysqli, "SELECT count(id) FROM donation_data");
+$donationrow = mysqli_fetch_array($donationresult);
+$donationCount = $donationrow[0];
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -84,6 +89,12 @@ $rejectCount = $rejectCountrow[0];
             border-bottom: 5px red solid;
             color: red;
             width: 212px;">Rejected <br> <?php echo $rejectCount; ?></a>
+            <a class="nav-link active shadow-lg p-3 mb-5 bg-body rounded" aria-current="page" href="donation_view.php" style="margin-left: 24px;
+            height: 100px;
+            padding-top: 25px;
+            border-bottom: 5px blue solid;
+            color: blue;
+            width: 212px;">Donation <br> <?php echo $donationCount; ?></a>
 
             <a class="nav-link active " aria-current="page" href="announcement.php" style="margin-left:5px;
             height: 100px;

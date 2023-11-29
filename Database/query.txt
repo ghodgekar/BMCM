@@ -24,3 +24,7 @@ ALTER TABLE `donation_data`
 ALTER TABLE `donation_data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+
+//30-11-2023
+ALTER TABLE `candidate_data` ADD `dob` VARCHAR(50) NULL DEFAULT NULL AFTER `emp_id`;

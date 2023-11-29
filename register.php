@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
-                        <input type="text" id="form3Example1n7" class="form-control form-control-lg" name="date-of-birth" placeholder="DOB/जन्मतारीख " style="font-size:15px" />
+                        <input type="text" id="form3Example1n7" class="form-control form-control-lg" name="dob" placeholder="DOB/जन्मतारीख " style="font-size:15px" />
                         <!-- <label class="form-label" for="form3Example1n">Department/खाते</label> -->
                       </div>
                     </div>

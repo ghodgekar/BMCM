@@ -14,6 +14,7 @@ $f_name = $_POST['f_name'];
 $m_name = $_POST['m_name'];
 $l_name = $_POST['l_name'];
 $position = $_POST['position'];
+$dob = $_POST['dob'];
 $blood_grup = $_POST['blood_grup'];
 $division = $_POST['division'];
 $department = $_POST['department'];
@@ -52,7 +53,7 @@ if (isset($f_name, $m_name, $l_name, $blood_grup, $position, $division, $departm
                 $currentYear = date("Y");
                 $reg_no = $cucc = sprintf($currentYear . '%05d', $last_id);
 
-                $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `blood_grup`, `position`, `division`, `department`, `emp_id`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `fees_type`,`fees_transaction_id`,`fees_date`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$blood_grup', '$position', '$division', '$department', '$emp_id', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$fees_type','$fees_transaction_id', '$fees_date', '$encodePassword','1','1')";
+                $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `blood_grup`, `position`, `division`, `department`, `emp_id`, `dob`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `fees_type`,`fees_transaction_id`,`fees_date`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$blood_grup', '$position', '$division', '$department', '$emp_id','$dob', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$fees_type','$fees_transaction_id', '$fees_date', '$encodePassword','1','1')";
                 if ($mysqli->query($sql) === true) {
                     $file_path = 'uploads/' . $reg_no;
                     if (!file_exists($file_path)) {
