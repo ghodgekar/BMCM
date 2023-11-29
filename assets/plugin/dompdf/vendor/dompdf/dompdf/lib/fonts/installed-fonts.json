@@ -1,5 +1,17 @@
 {
     "freeserif": {
         "normal": "freeserif_normal_23f42220b96d85e9bb76f50fc3df084b"
+    },
+    "muli": {
+        "normal": "D:\\xampp\\htdocs\\BMCM\\assets\\plugin\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/muli_normal_08ae51711ac331644a22af80f5557319",
+        "600": "D:\\xampp\\htdocs\\BMCM\\assets\\plugin\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/muli_600_1d5fdcb5024e0f9e84a9951e1ebae778",
+        "bold": "D:\\xampp\\htdocs\\BMCM\\assets\\plugin\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/muli_bold_7011df49f6e372fa80ed1d66328744b9",
+        "800": "muli_800_716f4a13a07db1a75684f33417f5330f"
+    },
+    "opensans-regular": {
+        "normal": "opensans_regular_normal_0728e60281bba165a59f41b5ff57471f"
+    },
+    "mangal": {
+        "normal": "mangal_normal_0728e60281bba165a59f41b5ff57471f"
     }
 }

@@ -68,6 +68,7 @@
         </tr>
         <?php 
             $count++;
+            }
             if($_GET['s'] == '1'){$filename = 'pending'; }
             if($_GET['s'] == '2'){$filename = 'payment'; }
             if($_GET['s'] == '3'){$filename = 'approve'; }
@@ -77,7 +78,6 @@
             header("Content-Disposition: attachment; filename=" . $filename . "-Report.xls");
             header("Pragma: no-cache");
             header("Expires: 0");
-        }
         ?>
     </tbody>
 </table>
