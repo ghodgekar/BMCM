@@ -4,6 +4,7 @@
             <th scope="col">id</th>
             <th scope="col">Reg No</th>
             <th scope="col">Full Name</th>
+            <th scope="col">Birth Date</th>
             <th scope="col">Email id</th>
             <th scope="col">Mobile No</th>
             <th scope="col">Current Address</th>
@@ -29,6 +30,7 @@
             $count = 1;
             while ($row = mysqli_fetch_assoc($result)) {
                 $name = $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
+                $date_of_birth = $row['date_of_birth'];
                 $reg_no = $row['reg_no'];
                 $position = $row['position'];
                 $blood_grup = $row['blood_grup'];
@@ -50,6 +52,7 @@
             <th scope="row"><?php echo $count; ?></th>
             <td><?php echo $reg_no; ?></td>
             <td><?php echo $name; ?></td>
+            <td><?php echo $date_of_birth; ?></td>
             <td><?php echo $email; ?></td>
             <td><?php echo $mobile_no; ?></td>
             <td><?php echo $current_address; ?></td>

@@ -51,26 +51,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-4 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example12" class="form-control form-control-lg" name="position" placeholder="Position/पद/हुद्दा "  style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1m">Position/पद/हुद्दा</label> -->
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example1n3" class="form-control form-control-lg" name="division"  placeholder="Division/विभाग " style="font-size:15px"/>
-                        <!-- <label class="form-label" for="form3Example1n">Division/विभाग</label> -->
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example1n4" class="form-control form-control-lg" name="department" placeholder="Department/खाते " style="font-size:15px" />
-                        <!-- <label class="form-label" for="form3Example1n">Department/खाते</label> -->
-                      </div>
-                    </div>
-                  </div>
+                  
                   <div class="row">
                     <div class="col-md-4 mb-4">
                       <div class="form-outline">
@@ -135,6 +116,76 @@
                   </div>
 
                   <hr>
+
+
+
+
+
+<!--office work details--->
+<p><b>माझी कार्यालयीन माहिती खालीलप्रमाणे</b></p>
+
+<div class="row">
+  <div class="col-md-4 mb-4">
+    <div class="form-outline">
+      <input type="text" id="form3Example1m" class="form-control form-control-lg" name="position" placeholder="Position/पद/हुद्दा "  style="font-size:15px"/>
+      <!-- <label class="form-label" for="form3Example1m">Position/पद/हुद्दा</label> -->
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <div class="form-outline">
+      <input type="text" id="form3Example1n" class="form-control form-control-lg" name="department" placeholder="Department/खाते " style="font-size:15px" />
+      <!-- <label class="form-label" for="form3Example1n">Department/खाते</label> -->
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <div class="form-outline">
+      <input type="text" id="form3Example1n" class="form-control form-control-lg" name="division"  placeholder="Division/विभाग " style="font-size:15px"/>
+      <!-- <label class="form-label" for="form3Example1n">Division/विभाग</label> -->
+    </div>
+  </div>
+  
+ 
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <div class="form-outline mb-4">
+    <input type="text" id="form3Example1n" class="form-control form-control-lg" name="ward"  placeholder="Ward/ " style="font-size:15px"/>
+      <!-- <label class="form-label" for="form3Example97">Email ID/ई-मेल आयडी</label> -->
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div class="form-outline">
+      <input type="text" id="form3Example1n1" class="form-control form-control-lg"
+        name="domain_experties" placeholder="Domain Experties " style="font-size:15px" />
+      <!-- <label class="form-label" for="form3Example1n1">Blood Group/रक्तगट</label> -->
+    </div>
+  </div>
+  <div class="col-md-12 mb-4">
+    <div class="form-outline">
+      <input type="text" id="form3Example1m1" class="form-control form-control-lg"
+        name="workplace_location" placeholder="Workplace Location"  style="font-size:15px"/>
+      
+    </div>
+</div>
+<hr>
+<hr>
+<!-- end office details--->
+
+
+
+
+
+
+
+
+
+
+
 
 
                   <div class="row">

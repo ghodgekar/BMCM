@@ -56,9 +56,9 @@ session_start();
                 About us
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Journey.php">Journery</a></li>
-                <li><a class="dropdown-item" href="logo.php">Logo</a></li>
-                <li><a class="dropdown-item" href="executive_committee.php">Executive_Committee </a></li>
+                <li><a class="dropdown-item" href="Journey.php">Our Journey</a></li>
+                <li><a class="dropdown-item" href="logo.php">Our Logo</a></li>
+                <li><a class="dropdown-item" href="executive_committee.php">Executive Committee </a></li>
               </ul>
             </li>
             <li class="nav-item">

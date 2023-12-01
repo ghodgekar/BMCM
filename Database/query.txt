@@ -28,3 +28,10 @@ COMMIT;
 
 //30-11-2023
 ALTER TABLE `candidate_data` ADD `dob` VARCHAR(50) NULL DEFAULT NULL AFTER `emp_id`;
+
+//1/12/2023
+
+
+ALTER TABLE `candidate_data` ADD `ward` VARCHAR(100) NOT NULL AFTER `email`,
+ ADD `domain_experties` VARCHAR(255)  NOT NULL AFTER `ward`, 
+ ADD `workplace_location` VARCHAR(255)  NOT NULL AFTER `domain_experties`;
