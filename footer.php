@@ -43,10 +43,3 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-<script type='text/javascript'>
-function newPage() {
-  var newWindow=window.open('userpanel/memberid.php',"_blank");
-  newWindow.onload = function() { newWindow.print(); }
-}
-</script>

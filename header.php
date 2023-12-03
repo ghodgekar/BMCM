@@ -31,7 +31,7 @@ session_start();
       <?php }else{ ?>
         <div class="p-2 bd-highlight">
           <a class="btn btn-danger" style="background-color:#f7e510" href="userpanel/index.php">Profile</a></button>
-          <a class="btn btn-primary" onclick = "newPage();">Member Id Card</a></button>
+          <a class="btn btn-primary" href="userpanel/memberid.php">Member Id Card</a></button>
           <a class="btn btn-primary" href="logout.php">Logout</a></button>
         </div>
       <?php } ?>

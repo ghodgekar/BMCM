@@ -63,7 +63,9 @@ $(document).ready(function ()
                     $('#registratiionform').css("opacity", "1");
                     if (response.status == 0) {
                         $(".msg").addClass("error-span");
+                        $(".msg").removeClass("success-span");
                     } else {
+                        $(".msg").removeClass("error-span");
                         $(".msg").addClass("success-span");
                     }
                     $('.msg').text(response.message);

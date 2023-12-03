@@ -29,12 +29,16 @@ $recommender_member_no = $_POST['recommender_member_no'];
 $fees_type = $_POST['fees_type'];
 $fees_transaction_id = $_POST['fees_transaction_id'];
 $fees_date = $_POST['fees_date'];
+$ward = $_POST['ward'];
+$domain_experties = $_POST['domain_experties'];
+$workplace_location = $_POST['workplace_location'];
+$fees_amt = $_POST['fees_amt'];
 $password = $_POST['password'];
 
 // If form is submitted
-if (isset($f_name, $m_name, $l_name, $blood_grup, $position, $division, $department, $emp_id, $mobile_no, $email, $permanent_address, $current_address, $recommender_name, $recommender_mobile_no, $recommender_member_no, $fees_type,$fees_transaction_id,$fees_date, $password)) {
+if (isset($f_name, $m_name, $l_name, $blood_grup, $position, $division, $department, $emp_id, $mobile_no, $email, $permanent_address, $current_address, $recommender_name, $recommender_mobile_no, $recommender_member_no, $fees_type,$fees_transaction_id,$fees_date, $ward, $domain_experties, $workplace_location, $fees_amt, $password)) {
     // Check whether submitted data is not empty
-    if (!empty($f_name) && !empty($m_name) && !empty($l_name) && !empty($blood_grup) && !empty($position) && !empty($division) && !empty($department) && !empty($emp_id) && !empty($mobile_no) && !empty($email) && !empty($permanent_address) && !empty($current_address) && !empty($recommender_name) && !empty($recommender_mobile_no) && !empty($recommender_member_no) && !empty($fees_type) && !empty($fees_transaction_id) && !empty($fees_date) && !empty($password)) {
+    if (!empty($f_name) && !empty($m_name) && !empty($l_name) && !empty($blood_grup) && !empty($position) && !empty($division) && !empty($department) && !empty($emp_id) && !empty($mobile_no) && !empty($email) && !empty($permanent_address) && !empty($current_address) && !empty($recommender_name) && !empty($recommender_mobile_no) && !empty($recommender_member_no) && !empty($fees_type) && !empty($fees_transaction_id) && !empty($fees_date) && !empty($ward) && !empty($domain_experties) && !empty($workplace_location) && !empty($fees_amt) && !empty($password)) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
             $response['message'] = 'Please enter a valid email.';
         } else {
@@ -53,7 +57,7 @@ if (isset($f_name, $m_name, $l_name, $blood_grup, $position, $division, $departm
                 $currentYear = date("Y");
                 $reg_no = $cucc = sprintf($currentYear . '%05d', $last_id);
 
-                $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `blood_grup`, `position`, `division`, `department`, `emp_id`, `dob`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `fees_type`,`fees_transaction_id`,`fees_date`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$blood_grup', '$position', '$division', '$department', '$emp_id','$dob', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$fees_type','$fees_transaction_id', '$fees_date', '$encodePassword','1','1')";
+                $sql = "INSERT INTO `candidate_data`(`reg_no`, `f_name`, `m_name`, `l_name`, `blood_grup`, `position`, `division`, `department`, `emp_id`, `dob`, `mobile_no`, `email`, `permanent_address`, `current_address`, `recommender_name`, `recommender_mobile_no`, `recommender_member_no`, `fees_type`,`fees_transaction_id`,`fees_date`, `ward`, `domain_experties`, `workplace_location`, `fees_amt`, `password`, `status`, `is_active`) VALUES ('$reg_no','$f_name', '$m_name', '$l_name', '$blood_grup', '$position', '$division', '$department', '$emp_id','$dob', '$mobile_no', '$email', '$permanent_address', '$current_address', '$recommender_name', '$recommender_mobile_no', '$recommender_member_no', '$fees_type','$fees_transaction_id', '$fees_date', '$ward', '$domain_experties', '$workplace_location', '$fees_amt', '$encodePassword','1','1')";
                 if ($mysqli->query($sql) === true) {
                     $file_path = 'uploads/' . $reg_no;
                     if (!file_exists($file_path)) {
@@ -69,19 +73,6 @@ if (isset($f_name, $m_name, $l_name, $blood_grup, $position, $division, $departm
                                 $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
                                 if (move_uploaded_file($_FILES['upload_file']['tmp_name'][$key], $targetFilePath)) {
                                     $uploadedFile = $fileName;
-
-                                    //mail
-                                    // ini_set("SMTP", "smtp.gmail.com");
-                                    // ini_set("sendmail_from", "surabhi.g@smbgroup.co.in");
-
-                                    // $to      = $email;
-                                    // $subject = 'BMCM Registration Successufull';
-                                    // $message = 'Registration Successfull... You Can Login After Admin Approval...';
-                                    // $headers = 'From: surabhi.g@smbgroup.co.in'       . "\r\n" .
-                                    //             'X-Mailer: PHP/' . phpversion();
-                                    // mail($to, $subject, $message, $headers);
-                                    //end mail
-
                                     $response['status'] = 1;
                                     $response['message'] = 'Form data submitted successfully!';
                                 } else {

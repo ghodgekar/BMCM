@@ -250,14 +250,14 @@
 .success-span{
     background: green;
     padding: 5px 15px;
-    color: #fff;
+    color: #fff !important;
     margin-top: 15PX;
 }
 
 .error-span{
     background: red;
     padding: 5px 15px;
-    color: #fff;
+    color: #fff !important;
     margin-top: 15PX;
 }
 

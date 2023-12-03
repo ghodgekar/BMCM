@@ -35,3 +35,6 @@ ALTER TABLE `candidate_data` ADD `dob` VARCHAR(50) NULL DEFAULT NULL AFTER `emp_
 ALTER TABLE `candidate_data` ADD `ward` VARCHAR(100) NOT NULL AFTER `email`,
  ADD `domain_experties` VARCHAR(255)  NOT NULL AFTER `ward`, 
  ADD `workplace_location` VARCHAR(255)  NOT NULL AFTER `domain_experties`;
+
+//3-12-2023
+ALTER TABLE `candidate_data` ADD `fees_amt` VARCHAR(100) NOT NULL AFTER `recommender_member_no`;

@@ -53,13 +53,7 @@ $fees_date = $row['fees_date'];
   }
 </style>
 
-
-
-
-
-
-
-<div class="container">
+<div class="">
   <div class="row">
     <div class="col-sm-12 border">
       <div class="d-flex justify-content-between text-center">
@@ -101,7 +95,7 @@ $fees_date = $row['fees_date'];
         आहे व त्यासाठी असणारे आजीवन सभासद शुल्क /वार्षिक सभासद शुल्क भरण्यास मी तयार आहे</p>
 
       <p><b>माझी वैयक्तिक माहिती खालील प्रमाणे आहे :- </b></p>
-      <div class="container">
+      <div class="">
         <!--row2-->
         <div class="row mb-1">
           <label for="inputtext" class="col-sm-4 col-form-label-sm">1.संपूर्ण नाव :-</label>
