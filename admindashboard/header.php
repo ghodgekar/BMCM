@@ -52,6 +52,7 @@ $donationCount = $donationrow[0];
         <div class="p-2 bd-highlight"><span><b>Admin Name : </b><?php echo $_SESSION['name']; ?></span><br>
           <span><b>Admin Email :</b> <?php echo $_SESSION['username']; ?></span>
         </div>
+        <div class="p-2 bd-highlight" style="color: green; font-size: 21px;"><a href="bulkMsg.php" class="btn btn-primary">Send Bulk MSG</a></div>
         <div class="p-2 bd-highlight" style="color: red; font-size: 21px;"><a href="logout.php" class="btn btn-danger">Log Out</a></div>
       </div>
     </div>
