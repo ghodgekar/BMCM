@@ -1,4 +1,18 @@
 <?php
+
+function curl_get_contents($url)
+{
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+  $data = curl_exec($ch);
+  curl_close($ch);
+  return $data;
+}
+
+
 require_once "config/db.php";
 
 // Allowed file types
@@ -75,6 +89,16 @@ if (isset($f_name, $m_name, $l_name, $blood_grup, $position, $division, $departm
                                     $uploadedFile = $fileName;
                                     $response['status'] = 1;
                                     $response['message'] = 'Form data submitted successfully!';
+                                    //send sms
+                                    $message = "Welcome to Maratha Mandal Family , please login to your account with your email ID:".$email." and Password:".$password.".";
+                                    $authKey = "409880Afm2thuJ4wvH6566d207P1";
+                                    $sender = "MMSS";
+                                    $route = "4";
+                                    $DLT_TE_ID = "1707170291119342842";
+                                    $content=urlencode($message);
+                                    $msgApi = "https://control.msg91.com/api/sendhttp.php?authkey=".$authKey."&mobiles=91".$mobile_no."&message=".$content."&sender=".$sender."&route=".$route."&DLT_TE_ID=".$DLT_TE_ID;
+                                    $send_msg = curl_get_contents($msgApi);
+                                    //end
                                 } else {
                                     $uploadStatus = 0;
                                     $response['message'] = 'Sorry, there was an error uploading your file.';

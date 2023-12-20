@@ -69,6 +69,7 @@ $(document).ready(function ()
                         $(".msg").addClass("success-span");
                     }
                     $('.msg').text(response.message);
+                    $("#registratiionform")[0].reset();
                 }
             });
         }
@@ -270,7 +271,7 @@ $(document).ready(function ()
                         $(".msg").addClass("success-span");
                     }
                     $('.msg').text(response.message);
-                    $("#contact_form2")[0].reset()``
+                    $("#contact_form2")[0].reset();
                 }
             });
         }
